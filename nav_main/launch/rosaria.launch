@@ -1,0 +1,9 @@
+<launch>
+
+    <!-- tudo que for recebido no cmd_vel será lido pelo RosAria/cmd_vel -->
+    <remap from="RosAria/cmd_vel" to="cmd_vel" />
+    <node name="RosAria" pkg="rosaria" type="RosAria" output="screen">
+        <param name="port" type="string" value="/dev/ttyUSB3" />
+    </node>
+
+</launch>

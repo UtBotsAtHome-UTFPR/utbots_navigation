@@ -1,0 +1,12 @@
+<package>
+  <description brief="UTBot">
+
+     UTBot
+
+  </description>
+  <author>LASCA-NUC</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/UTBot</url>
+
+</package>
