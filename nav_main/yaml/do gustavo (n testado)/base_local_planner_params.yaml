@@ -1,0 +1,22 @@
+# Parâmetros do planejamento da trajetória
+TrajectoryPlannerROS:
+
+  # Velocidades máxima e mínima em X
+  max_vel_x:    0.45
+  min_vel_x:    0.1
+
+  # Velocidade angular máxima
+  max_rotational_vel:    1.0
+
+  # Velocidade mínima de orientação em torno de Z
+  min_in_place_rotational_vel:     0.4
+
+  # Limite de aceleração angular em torno de Z
+  acc_lim_th:    3.2
+
+  # Limites de aceleração linear em X e Y
+  acc_lim_x:    2.5
+  acc_lim_y:    2.5
+
+  # Robô é holonômico?
+  holonomic_robot:     false

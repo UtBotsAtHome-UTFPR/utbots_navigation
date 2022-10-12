@@ -1,0 +1,26 @@
+# Parâmetros locais para o Costmap
+local_costmap:
+  # Frames
+  global_frame:        map      # Referência do ambiente
+  robot_base_frame:    base_link # Sistema de referência do robô
+
+  # Frequências de atualização e publicação do Costmap
+  update_frequency:   5.0
+  publish_frequency:  2.0
+
+  # Defien se o mapa é estático (ambiente já foi mapeado) ou será criado dinamicamente pelo SLAM
+  static_map:    false    
+
+  # Mantém o robô no centro do Costmap
+  rolling_window: true
+
+  # Tamanho do Costmap
+  width:  6.0
+  height: 6.0
+
+  # Resolução do Costmap
+  resolution: 0.025
+
+  # Coordenadas de origem do Costmap
+  origin_x: 0.0
+  origin_y: 0.0

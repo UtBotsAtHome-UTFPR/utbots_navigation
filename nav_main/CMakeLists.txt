@@ -14,6 +14,7 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   sensor_msgs
   std_msgs
+  tf
 )
 
 ## System dependencies are found with CMake's conventions
@@ -207,3 +208,6 @@ include_directories(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+
+add_executable(mapTfBroadcaster src/mapTfBroadcaster.cpp)
+target_link_libraries(mapTfBroadcaster ${catkin_LIBRARIES})
