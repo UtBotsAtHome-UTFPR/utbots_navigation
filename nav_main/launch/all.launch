@@ -3,11 +3,13 @@
     <include file="$(find nav_main)/launch/lidar.launch" />
 
     <include file="$(find nav_main)/launch/rosaria.launch" />
-    
+
     <include file="$(find nav_main)/launch/tf.launch" />
 
     <include file="$(find nav_main)/launch/move_base.launch" />
 
-    <node pkg="rqt_tf_tree" type="rqt_tf_tree" name="rqt_tf_tree" />
+    <!-- <node pkg="rqt_tf_tree" type="rqt_tf_tree" name="rqt_tf_tree" /> -->
+
+    <node type="rviz" name="rviz" pkg="rviz" args="-d $(find nav_main)/launch/rviz.rviz" />
 
 </launch>

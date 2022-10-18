@@ -37,12 +37,19 @@ int main(int argc, char **argv)
 
             // Tf
             transform.setOrigin( tf::Vector3(
-                -msg_odom.pose.pose.position.x, 
+                msg_odom.pose.pose.position.x, 
                 msg_odom.pose.pose.position.y, 
                 msg_odom.pose.pose.position.z) );
-            tf::Quaternion q;
-            q.setEuler(0, 0, 0);
-            transform.setRotation(q);
+
+            transform.setRotation(tf::Quaternion(
+                msg_odom.pose.pose.orientation.x, 
+                msg_odom.pose.pose.orientation.y, 
+                msg_odom.pose.pose.orientation.z,
+                msg_odom.pose.pose.orientation.w));
+
+            transform.setRotation(tf::Quaternion(
+                0, 0, 0, 1.0));
+
             br.sendTransform(tf::StampedTransform(transform, ros::Time::now(), "map", "odom"));
 
             ROS_INFO("Updating odom tf...");

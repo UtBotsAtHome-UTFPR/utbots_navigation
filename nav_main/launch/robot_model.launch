@@ -1,0 +1,3 @@
+<launch>
+    <param name="robot_description" textfile="$(find nav_main)/launch/robot_model.urdf" />
+</launch>
