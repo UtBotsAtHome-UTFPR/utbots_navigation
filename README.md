@@ -37,6 +37,6 @@
     # RosAria
     roslaunch nav_main rosaria.launch
 
-    # TF publishing between /map and /odom
+    # TF publishing between /map and /odom (and other TFs too)
     roslaunch nav_main tf.launch
     ```
