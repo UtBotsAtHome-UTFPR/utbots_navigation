@@ -154,9 +154,9 @@ string
 map
 -
 
-/home/driver/apollo_ws/src/apollo_navigation/ydlidar_ros_driver/YDLidar-SDK/samples/et_test.cpp
+/home/laser/catkin_ws/src/utbots_navigation/ydlidar_ros_driver/YDLidar-SDK/samples/et_test.cpp
 CYdLidar.h
-/home/driver/apollo_ws/src/apollo_navigation/ydlidar_ros_driver/YDLidar-SDK/samples/CYdLidar.h
+/home/laser/catkin_ws/src/utbots_navigation/ydlidar_ros_driver/YDLidar-SDK/samples/CYdLidar.h
 iostream
 -
 string

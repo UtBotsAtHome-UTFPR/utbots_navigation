@@ -154,13 +154,13 @@ string
 map
 -
 
-/home/driver/apollo_ws/src/apollo_navigation/ydlidar_ros_driver/YDLidar-SDK/test/lidar_test.cpp
+/home/laser/catkin_ws/src/utbots_navigation/ydlidar_ros_driver/YDLidar-SDK/test/lidar_test.cpp
 lidar_test.h
-/home/driver/apollo_ws/src/apollo_navigation/ydlidar_ros_driver/YDLidar-SDK/test/lidar_test.h
+/home/laser/catkin_ws/src/utbots_navigation/ydlidar_ros_driver/YDLidar-SDK/test/lidar_test.h
 
-/home/driver/apollo_ws/src/apollo_navigation/ydlidar_ros_driver/YDLidar-SDK/test/lidar_test.h
+/home/laser/catkin_ws/src/utbots_navigation/ydlidar_ros_driver/YDLidar-SDK/test/lidar_test.h
 gtest/gtest.h
-/home/driver/apollo_ws/src/apollo_navigation/ydlidar_ros_driver/YDLidar-SDK/test/gtest/gtest.h
+/home/laser/catkin_ws/src/utbots_navigation/ydlidar_ros_driver/YDLidar-SDK/test/gtest/gtest.h
 CYdLidar.h
-/home/driver/apollo_ws/src/apollo_navigation/ydlidar_ros_driver/YDLidar-SDK/test/CYdLidar.h
+/home/laser/catkin_ws/src/utbots_navigation/ydlidar_ros_driver/YDLidar-SDK/test/CYdLidar.h
 

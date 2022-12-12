@@ -1,4 +1,4 @@
-# Install script for directory: /home/driver/apollo_ws/src/apollo_navigation/ydlidar_ros_driver/YDLidar-SDK/test
+# Install script for directory: /home/laser/catkin_ws/src/utbots_navigation/ydlidar_ros_driver/YDLidar-SDK/test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
