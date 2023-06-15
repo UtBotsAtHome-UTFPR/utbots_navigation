@@ -1,4 +1,4 @@
-# apollo_navigation
+# utbots_navigation
 
 - ## rosaria
     - Enables communication of the Pioneer P3AT with ROS
