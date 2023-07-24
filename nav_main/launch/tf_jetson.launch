@@ -1,0 +1,10 @@
+<launch>
+    <machine name="nano" address="192.168.1.2" env-loader="/opt/ros/melodic/env.sh" user="laser"/>
+
+    <param name="robot_description" textfile="$(find utbots_meshes)/created/robot_model.urdf" />
+    <node pkg="nav_main" type="mapTfBroadcaster" name="map_broadcaster" machine="nano" />
+    <node pkg="tf" type="static_transform_publisher" name="basefootprint_broadcaster" machine="nano" args="0 0 0 0 0 0 base_link base_footprint 30" />
+    <node pkg="tf" type="static_transform_publisher" name="model_broadcaster" machine="nano" args="0 0 0 0 0 0 base_footprint robot_model 30" />
+    <node pkg="tf" type="static_transform_publisher" name="camera_broadcaster" machine="nano" args="0 0 1.24 0 0 0 base_footprint camera_link 30" />
+    <node pkg="tf" type="static_transform_publisher" name="laser_broadcaster" machine="nano" args="0.22 0 0.28 0 0 0 base_footprint laser_frame 30" />
+</launch>
