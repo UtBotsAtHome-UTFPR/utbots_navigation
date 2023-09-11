@@ -4,6 +4,7 @@ import rospy
 from std_msgs.msg import String
 from geometry_msgs.msg import PointStamped, Twist, PoseStamped
 from math import sqrt, atan2, degrees
+import smach
 
 class SmGoTo():
     def __init__(self):
@@ -11,11 +12,11 @@ class SmGoTo():
                              outcomes=["adjusted_vel", "stop_vel", "sent"],
                              input_keys=["type", "coordinate"])
         
-    self.msg_cmdVel = Twist()
-    self.pub_cmdVel = rospy.Publisher("/cmd_vel", Twist, queue_size=1)
-    self.pub_pose = rospy.Publisher("/move_base_simple/goal", PoseStamped, queue_size=1)
-    self.kp_linear = 0.01
-    self.kp_angular = 0.01
+        self.msg_cmdVel = Twist()
+        self.pub_cmdVel = rospy.Publisher("/cmd_vel", Twist, queue_size=1)
+        self.pub_pose = rospy.Publisher("/move_base_simple/goal", PoseStamped, queue_size=1)
+        self.kp_linear = 0.01
+        self.kp_angular = 0.01
     
     def execute(self, userdata):
         msg_pose = PoseStamped
