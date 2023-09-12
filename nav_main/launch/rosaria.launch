@@ -1,9 +1,9 @@
 <launch>
+    <machine name="zeus" address="192.168.1.3" timeout="30" env-loader="/opt/ros/indigo/env.sh" user="robo" password="robo"/>
 
-    <!-- tudo que for recebido no cmd_vel será lido pelo RosAria/cmd_vel -->
-    <remap from="RosAria/cmd_vel" to="cmd_vel" />
-    <node name="RosAria" pkg="rosaria" type="RosAria" output="screen">
-        <param name="port" type="string" value="/dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller_D-if00-port0" />
+    <node machine="zeus" pkg="rosaria" type="RosAria" name="RosAria" args="_baud:=57600 _port:=/dev/ttyUSB0">
+        <param name="publish_aria_lasers" value="true" />
+        <remap from="/RosAriaP3LX/cmd_vel" to="/cmd_vel" />
     </node>
 
 </launch>

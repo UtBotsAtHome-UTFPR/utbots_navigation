@@ -2,7 +2,7 @@
 global_costmap:
   # Frames
   global_frame:     map
-  robot_base_frame: base_footprint
+  robot_base_frame: base_link
 
   # Frequências de atualização e publicação do Costmap
   update_frequency:   30.0
