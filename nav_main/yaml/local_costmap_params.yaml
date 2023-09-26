@@ -1,8 +1,8 @@
 # Parâmetros locais para o Costmap
 local_costmap:
   # Frames
-  global_frame:        odom
-  robot_base_frame:    base_link
+  global_frame: odom
+  robot_base_frame: base_link
 
   # Frequências de atualização e publicação do Costmap
   update_frequency:   30.0

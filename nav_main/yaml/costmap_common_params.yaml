@@ -11,7 +11,7 @@ footprint: [ [0.36, 0.27], [0.36, -0.27], [-0.36, -0.27], [-0.36, -0.27] ]
 inflation_radius: 0.1
 
 # Tolerância de atraso para as transformações
-transform_tolerance: 0.3
+transform_tolerance: 1.5
 
 # Sensores de percepção
 observation_sources: laser_scan_sensor

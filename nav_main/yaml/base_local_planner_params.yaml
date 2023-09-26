@@ -20,3 +20,5 @@ TrajectoryPlannerROS:
 
   # Robô é holonômico?
   holonomic_robot:     false
+  
+  meter_scoring: true
