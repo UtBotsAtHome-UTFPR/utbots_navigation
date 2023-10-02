@@ -1,0 +1,48 @@
+wp2:
+  header:
+    frame_id: ''
+    stamp:
+      nsecs: 0
+      secs: 0
+  pose:
+    orientation:
+      w: 0.0
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    position:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+wp2:
+  header:
+    frame_id: ''
+    stamp:
+      nsecs: 0
+      secs: 0
+  pose:
+    orientation:
+      w: 0.0
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    position:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+wp2:
+  header:
+    frame_id: ''
+    stamp:
+      nsecs: 0
+      secs: 0
+  pose:
+    orientation:
+      w: 0.0
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    position:
+      x: 0.0
+      y: 0.0
+      z: 0.0
