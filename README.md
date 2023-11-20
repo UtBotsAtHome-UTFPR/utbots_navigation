@@ -11,7 +11,7 @@
     git clone https://github.com/UtBotsAtHome-UTFPR/utbots_navigation.git
 
     # Compile YDLidar SDK
-    roscd ydlidar_ros_driver/build
+    roscd utbots_navigation ydlidar_ros_driver/YDLidar-SDK/build/
     cmake ..
     make
     sudo make install
