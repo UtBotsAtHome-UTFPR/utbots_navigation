@@ -3,3 +3,4 @@ build/*
 devel/*
 *.out
 *.o
+ydlidar_ros_driver/YDLidar-SDK/build/CMakeCache.txt
