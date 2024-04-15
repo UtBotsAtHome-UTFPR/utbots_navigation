@@ -1,5 +1,25 @@
 # utbots_navigation
 
+- **This stack contains packages related to human-robot interface, such as:**
+    - rosaria
+    - ydlidar_ros_driver
+    - nav_main
+
+- ### Getting started
+    - ### Installation
+        ```bash 
+        cd catkin_ws/src
+        git clone --recurse-submodules https://github.com/UtBotsAtHome-UTFPR/utbots_voice.git
+        cd ../
+        ```
+
+    - #### Building
+        ```bash
+        catkin_make -DCMAKE_BUILD_TYPE=Release
+        ```
+    - #### Running
+        See the usage explanation accessing each package in the repository or below
+
 - ## rosaria
     - Enables communication of the Pioneer P3AT with ROS
     - Run it from the launch file in nav_main (see below)
