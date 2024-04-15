@@ -1,5 +1,3 @@
-# utbots_navigation
-
 - **This stack contains packages related to human-robot interface, such as:**
     - rosaria
     - ydlidar_ros_driver
