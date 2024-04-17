@@ -18,11 +18,12 @@
     - #### Running
         See the usage explanation accessing each package in the repository or below
 
-- ## rosaria
+## Overview
+- ### rosaria
     - Enables communication of the Pioneer P3AT with ROS
     - Run it from the launch file in nav_main (see below)
 
-- ## ydlidar_ros_driver 
+- ### ydlidar_ros_driver 
     - LIDAR driver for ROS
     ```bash
     # Clone
@@ -42,7 +43,7 @@
     catkin_make
     ```
 
-- ## nav_main
+- ### nav_main
     - For programs and files related to get the navigation system working
     ```bash
 
