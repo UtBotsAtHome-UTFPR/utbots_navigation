@@ -33,6 +33,8 @@ See the usage explanation accessing each package in the repository or below
 - Enables communication of the Pioneer P3AT with ROS
 - Run it from the launch file in nav_main (see below)
 
+---
+
 ### ydlidar_ros_driver
 
 - LIDAR driver for ROS
@@ -55,6 +57,8 @@ cd ~/catkin_ws
 catkin_make
 ```
 
+---
+
 ### nav_main
 
 - For programs and files related to get the navigation system working
@@ -72,3 +76,5 @@ roslaunch nav_main rosaria.launch
 # TF publishing between /map and /odom (and other TFs too)
 roslaunch nav_main tf.launch
 ```
+
+---
