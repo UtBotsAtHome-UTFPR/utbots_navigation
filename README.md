@@ -1,22 +1,22 @@
 - **This stack contains packages related to human-robot interface, such as:**
-    - rosaria
-    - ydlidar_ros_driver
-    - nav_main
+- rosaria
+- ydlidar_ros_driver
+- nav_main
 
-- ### Getting started
-    - ### Installation
-        ```bash 
-        cd catkin_ws/src
-        git clone --recurse-submodules https://github.com/UtBotsAtHome-UTFPR/utbots_voice.git
-        cd ../
-        ```
+## Getting started
+- ### Installation
+```bash 
+cd catkin_ws/src
+git clone --recurse-submodules https://github.com/UtBotsAtHome-UTFPR/utbots_voice.git
+cd ../
+```
 
-    - #### Building
-        ```bash
-        catkin_make -DCMAKE_BUILD_TYPE=Release
-        ```
-    - #### Running
-        See the usage explanation accessing each package in the repository or below
+- ### Building
+```bash
+catkin_make -DCMAKE_BUILD_TYPE=Release
+```
+- ### Running
+    See the usage explanation accessing each package in the repository or below
 
 ## Overview
 - ### rosaria
