@@ -8,7 +8,7 @@
 
 ## Getting started
 
-- ### Installation
+### Installation
 
 ```bash
 cd catkin_ws/src
@@ -16,15 +16,15 @@ git clone --recurse-submodules https://github.com/UtBotsAtHome-UTFPR/utbots_voic
 cd ../
 ```
 
-- ### Building
+### Building
 
 ```bash
 catkin_make -DCMAKE_BUILD_TYPE=Release
 ```
 
-- ### Running
+### Running
 
-    See the usage explanation accessing each package in the repository or below
+See the usage explanation accessing each package in the repository or below
 
 ## Overview
 
