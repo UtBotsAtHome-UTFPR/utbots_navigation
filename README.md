@@ -22,7 +22,7 @@ cd ../
 catkin_make -DCMAKE_BUILD_TYPE=Release
 ```
 
-### Running
+## Running
 
 See the usage explanation accessing each package in the repository or below
 
