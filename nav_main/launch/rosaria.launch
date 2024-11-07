@@ -1,9 +1,0 @@
-<launch>
-    <machine name="zeus" address="192.168.1.3" timeout="30" env-loader="/opt/ros/indigo/env.sh" user="robo" password="robo"/>
-
-    <node machine="zeus" pkg="rosaria" type="RosAria" name="RosAria" args="_baud:=57600 _port:=/dev/ttyUSB0">
-        <param name="publish_aria_lasers" value="true" />
-        <remap from="/RosAriaP3LX/cmd_vel" to="/cmd_vel" />
-    </node>
-
-</launch>
