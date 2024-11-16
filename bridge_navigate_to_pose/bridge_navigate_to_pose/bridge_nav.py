@@ -15,14 +15,14 @@ class NavigationNode(Node):
         self.navigator = BasicNavigator()
 
         # Set the initial pose
-        initial_pose = PoseStamped()
-        initial_pose.header.frame_id = 'map'
-        initial_pose.header.stamp = self.navigator.get_clock().now().to_msg()
-        initial_pose.pose.position.x = -1.999406229747971
-        initial_pose.pose.position.y = -0.5000001448860989
-        initial_pose.pose.orientation.z = 0.00017372500724032591
-        initial_pose.pose.orientation.w = 0.9999945227842333
-        self.navigator.setInitialPose(initial_pose)
+        #initial_pose = PoseStamped()
+        #initial_pose.header.frame_id = 'map'
+        #initial_pose.header.stamp = self.navigator.get_clock().now().to_msg()
+        #initial_pose.pose.position.x = -1.999406229747971
+        #initial_pose.pose.position.y = -0.5000001448860989
+        #initial_pose.pose.orientation.z = 0.00017372500724032591
+        #initial_pose.pose.orientation.w = 0.9999945227842333
+        #self.navigator.setInitialPose(initial_pose)
 
         self.bt = ""
 
