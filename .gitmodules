@@ -1,0 +1,3 @@
+[submodule "hoverboard-driver"]
+	path = hoverboard-driver
+	url = https://github.com/hoverboard-robotics/hoverboard-driver.git
