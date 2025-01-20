@@ -8,6 +8,6 @@
     <param name="output_scan_topic" value="/scan_filtered" />
     
     <!-- Load the filter configuration from the YAML file -->
-    <param name="filter_config" value="$(find utbots_navigation)/config/laser_filter.yaml" />
+    <param name="filter_config" value="$(find nav_test)/config/laser_filter.yaml" />
   </node>
 </launch>
