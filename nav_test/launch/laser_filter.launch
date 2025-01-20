@@ -1,6 +1,6 @@
 <launch>
   <!-- Launch the scan_to_scan_filter_chain node -->
-  <node pkg="scan_filter_chain" type="scan_to_scan_filter_chain" name="scan_filter_chain" output="screen">
+  <node pkg="laser_filters" type="scan_to_scan_filter_chain" name="scan_filter_chain" output="screen">
     <!-- Specify the input LaserScan topic -->
     <param name="scan_topic" value="/scan" />
     
