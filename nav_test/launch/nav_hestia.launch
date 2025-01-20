@@ -13,6 +13,9 @@
     <arg name="model" value="$(arg model)" />
   </include>-->
 
+  <!-- Laser Filter -->
+  <include file="$(find utbots_navigation)/launch/laser_filter.launch"/>
+
   <!-- Necessary tf:
           Base_link laser (acho que só isso) 
   -->

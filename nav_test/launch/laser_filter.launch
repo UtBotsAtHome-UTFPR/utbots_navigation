@@ -1,0 +1,13 @@
+<launch>
+  <!-- Launch the scan_to_scan_filter_chain node -->
+  <node pkg="scan_filter_chain" type="scan_to_scan_filter_chain" name="scan_filter_chain" output="screen">
+    <!-- Specify the input LaserScan topic -->
+    <param name="scan_topic" value="/scan" />
+    
+    <!-- Specify the output filtered LaserScan topic -->
+    <param name="output_scan_topic" value="/scan_filtered" />
+    
+    <!-- Load the filter configuration from the YAML file -->
+    <param name="filter_config" value="$(find utbots_navigation)/config/laser_filter.yaml" />
+  </node>
+</launch>
