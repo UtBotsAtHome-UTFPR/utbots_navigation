@@ -141,7 +141,7 @@ Visualization Manager:
       Size (Pixels): 3
       Size (m): 0.0300000012
       Style: Flat Squares
-      Topic: /scan
+      Topic: /scan_filtered
       Unreliable: false
       Use Fixed Frame: true
       Use rainbow: true
@@ -308,7 +308,7 @@ Visualization Manager:
   Global Options:
     Background Color: 48; 48; 48
     Default Light: true
-    Fixed Frame: map
+    Fixed Frame: base_link
     Frame Rate: 30
   Name: root
   Tools:

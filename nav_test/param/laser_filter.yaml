@@ -1,12 +1,11 @@
-filters:
-  - name: "box_filter"
-    type: "laser_filters/LaserScanBoxFilter"
-    parameters:
-      box_frame: "base_link"  # The frame of reference for the box filter
-      max_x: 0.55            # Maximum x (forward) distance (meters)
-      max_y: 0.5             # Maximum y (sideways) distance (meters)
-      max_z: 0.5             # Maximum z (vertical) distance (meters)
-      min_x: -0.5            # Minimum x (forward) distance (meters)
-      min_y: -0.5            # Minimum y (sideways) distance (meters)
-      min_z: -0.5            # Minimum z (vertical) distance (meters)
-      invert: false          # Set to 'true' to remove points outside of the box
+scan_filter_chain:
+- name: box
+  type: laser_filters/LaserScanBoxFilter
+  params:
+    box_frame: base_link
+    min_x: -0.35
+    max_x: 0.35
+    min_y: -0.25
+    max_y: 0.25
+    min_z: -1.0
+    max_z: 1.0

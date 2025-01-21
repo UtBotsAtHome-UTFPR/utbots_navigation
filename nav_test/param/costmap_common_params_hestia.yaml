@@ -21,10 +21,9 @@ obstacle_layer:
   track_unknown_space:  true    # true needed for disabling global path planning through unknown space
   footprint_clearing_enabled: true
   raytrace_range: 8.0
-  publish_voxel_map: false
   observation_sources: scan
   scan:
-    sensor_frame: base_scan
+    sensor_frame: laser
     data_type: LaserScan
     topic: scan_filtered
     marking: true   # whether the sensor will be used to add obstacle information to the costmap
