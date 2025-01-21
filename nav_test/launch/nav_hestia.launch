@@ -25,6 +25,7 @@
   <include file="$(find nav_test)/launch/amcl.launch"/>
 
   <!-- Hoverboard driver -->
+  <param name="port" type="str" value="/dev/ttyUSB1"/>
   <include file="$(find hoverboard_driver)/launch/hoverboard.launch"/>
 
   <!-- Lidar driver -->
