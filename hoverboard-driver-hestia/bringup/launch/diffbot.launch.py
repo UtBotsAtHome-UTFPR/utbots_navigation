@@ -17,7 +17,6 @@ from launch.actions import DeclareLaunchArgument, RegisterEventHandler
 from launch.conditions import IfCondition
 from launch.event_handlers import OnProcessExit
 from launch.substitutions import Command, FindExecutable, PathJoinSubstitution, LaunchConfiguration
-
 from ament_index_python.packages import get_package_share_directory
 
 from launch_ros.actions import Node
