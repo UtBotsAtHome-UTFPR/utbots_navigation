@@ -49,8 +49,8 @@ def generate_launch_description():
             ),
         ]
     )
-    robot_description = {"robot_description": robot_description_content}
 
+    robot_description = {"robot_description": robot_description_content}
     robot_controllers = PathJoinSubstitution(
         [
             FindPackageShare("hoverboard_driver"),
@@ -106,7 +106,6 @@ def generate_launch_description():
         executable="spawner",
         arguments=["hoverboard_base_controller", "--controller-manager", "/controller_manager"],
     )
-
 
     # Delay rviz start after `joint_state_broadcaster`
     #delay_rviz_after_joint_state_broadcaster_spawner = RegisterEventHandler(
