@@ -30,26 +30,4 @@ def generate_launch_description():
             PythonLaunchDescriptionSource([rplidar_launch_file_dir, '/rplidar_a1_launch.py']),
         ),
 
-        Node(
-            package='tf2_ros',
-            executable='static_transform_publisher',
-            arguments=['0', '-0.08', '0', '0', '0', '0', 'base_footprint', 'base_link'],
-            output='screen'
-        ),
-
-        Node(
-            package='tf2_ros',
-            executable='static_transform_publisher',
-            arguments=['0', '0', '0', '0', '0', '0', 'laser', 'scan'],
-            output='screen'
-        ),
-
-        Node(
-            package='tf2_ros',
-            executable='static_transform_publisher',
-            arguments=['-0.35', '0', '0.06', '0', '0', '0', 'base_link', 'laser'],
-            output='screen'
-        ),
-        
-
         ])
