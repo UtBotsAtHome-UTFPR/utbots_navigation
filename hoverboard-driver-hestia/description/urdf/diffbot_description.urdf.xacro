@@ -11,7 +11,7 @@
     <joint name="${prefix}base_footprint_to_base_link" type="fixed">
       <parent link="${prefix}base_footprint"/>
       <child link="${prefix}base_link"/>
-      <origin xyz="0.20 0 0" rpy="0 0 0"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
     </joint>
 
     <!-- laser -->
