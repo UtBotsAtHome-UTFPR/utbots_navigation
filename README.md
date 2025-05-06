@@ -1,78 +1,68 @@
-# utbots_voice
+# utbots_navigation
 
-**This stack contains packages related to human-robot interface, such as:**
+**This stack contains packages related to environment mapping and autonomous navigation, such as:**
 
-- rosaria
-- ydlidar_ros_driver
-- nav_main
+- hoverboard_driver_hestia
+- utbots_nav
 
 ## Getting started
 
 ### Installation
 
 ```bash
-cd catkin_ws/src
-git clone --recurse-submodules https://github.com/UtBotsAtHome-UTFPR/utbots_voice.git
+cd <ros2_ws>/src
+git clone https://github.com/UtBotsAtHome-UTFPR/utbots_navigation.git
+git checkout ros2-dev
 cd ../
+```
+
+### Dependencies
+
+This stacks utilizes [rplidar_ros](https://github.com/Slamtec/rplidar_ros/tree/ros2) as the LIDAR driver and [navigation2](https://github.com/ros-navigation/navigation2) for navigation and mapping algorithms integration to ROS2. Install them with:
+
+```bash
+sudo apt install ros-humble-rplidar-ros ros-humble-navigation2
 ```
 
 ### Building
 
 ```bash
-catkin_make -DCMAKE_BUILD_TYPE=Release
+cd <ros2_ws>
+colcon buiild --symlink-install
 ```
 
 ## Running
 
-See the usage explanation accessing each package in the repository or below
+TODO: Document running the nav and map launches
 
 ## Overview
 
-### rosaria
+### rplidar_ros
 
-- Enables communication of the Pioneer P3AT with ROS
-- Run it from the launch file in nav_main (see below)
+- ROS2 Driver for RPLidar sensors
 
----
-
-### ydlidar_ros_driver
-
-- LIDAR driver for ROS
-
+#### Installation
 ```bash
-# Clone
-git clone https://github.com/UtBotsAtHome-UTFPR/utbots_navigation.git
+sudo apt install ros-humble-rplidar-ros
+```
 
-# Compile YDLidar SDK
-roscd utbots_navigation ydlidar_ros_driver/YDLidar-SDK/build/
-cmake ..
-make
-sudo make install
-
-# Install Aria
-sudo apt update && sudo apt install libaria-dev
-
-# Compile workspace
-cd ~/catkin_ws
-catkin_make
+#### Running
+We use RPLIDAR A1:
+```bash
+sudo chmod 777 /dev/ttyUSB0
+ros2 launch rplidar_ros view_rplidar_a1_launch.py
 ```
 
 ---
 
-### nav_main
+### navigation2
 
-- For programs and files related to get the navigation system working
+- Navigation and mapping algorithms integration to ROS2
 
+#### Installation
 ```bash
-# Lidar
-roslaunch nav_main lidar.launch
-
-# move_base (SLAM)
-roslaunch nav_main move_base.launch
-
-# RosAria
-roslaunch nav_main rosaria.launch
-
-# TF publishing between /map and /odom (and other TFs too)
-roslaunch nav_main tf.launch
+sudo apt install ros-humble-navigation2
 ```
+
+#### Running
+TODO: How to run basic nav2?
