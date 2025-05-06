@@ -11,6 +11,9 @@ from launch_ros.actions import Node
 
 '''
 export BASE_MODEL=hestia
+
+TODO: set this as default parameter
+TODO: adjust which parameters should be available to chenge configs on the 3 pulled launch files
 '''
 
 def generate_launch_description():
@@ -27,7 +30,7 @@ def generate_launch_description():
             PythonLaunchDescriptionSource([utbots_nav_launch_file_dir, '/utbots_navigation.launch.py']),
         ),
         IncludeLaunchDescription(
-            PythonLaunchDescriptionSource([rplidar_launch_file_dir, '/rplidar_a1_launch.py']),
+            PythonLaunchDescriptionSource([utbots_nav_launch_file_dir, '/rplidar.launch.py']),
         ),
 
         ])
