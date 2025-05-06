@@ -33,7 +33,15 @@ colcon buiild --symlink-install
 
 ## Running
 
-TODO: Document running the nav and map launches
+```bash
+export BASE_MODEL=hestia
+ros2 launch utbots_nav map.launch.py    ## Launch all mapping packages (Gmapping)
+ros2 launch utbots_nav nav.launch.py    ## Launch all navigation packages (AMCL)
+```
+
+### Changing parameters
+
+You can change the robot tf in `./hoverboard-driver-hestia/description/urdf/diffbot_description.urdf.xacro`, the navigation parameters in `./utbots_nav/param/hestia_nav.yaml` and mapping parameters in `./utbots_nav/param/hestia_map.yaml`.
 
 ## Overview
 
