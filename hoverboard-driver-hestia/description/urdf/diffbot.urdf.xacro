@@ -7,7 +7,7 @@
 
 
   <xacro:include filename="$(find hoverboard_driver)/urdf/diffbot_description.urdf.xacro" />
-a
+  
   <xacro:if value="$(arg use_ros2_control)">
     <xacro:include filename="$(find hoverboard_driver)/ros2_control/hoverboard_driver.ros2_control.xacro" />
   </xacro:if>
