@@ -1,5 +1,9 @@
 # utbots_navigation
 
+![Static Badge](https://img.shields.io/badge/ROS_Foxy-Not_Tested-red)
+![Static Badge](https://img.shields.io/badge/ROS_Humble-Tested-green)
+![Static Badge](https://img.shields.io/badge/ROS_Jazzy-Not_Tested-red)
+
 **This stack contains packages related to environment mapping and autonomous navigation, such as:**
 
 - hoverboard_driver_hestia
