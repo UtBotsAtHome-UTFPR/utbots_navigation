@@ -37,7 +37,7 @@ def generate_launch_description():
         default=os.path.join(
             get_package_share_directory('utbots_nav'),
             'map',
-            'corredor0.yaml'))
+            'map.yaml'))
 
     # Nav2 Bringup
     nav2_launch_file_dir = os.path.join(get_package_share_directory('nav2_bringup'), 'launch')
