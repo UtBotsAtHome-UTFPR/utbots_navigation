@@ -16,9 +16,22 @@ export BASE_MODEL=hestia
 BASE_MODEL = os.environ['BASE_MODEL']
 
 def generate_launch_description():
-    
+    # Sim Time Argument
     use_sim_time = LaunchConfiguration('use_sim_time', default='false')
+    
+    # RVIZ Argument
     use_rviz = LaunchConfiguration('use_rviz', default='true')
+
+    # Navigation Parameters
+    param_file_name = BASE_MODEL + '_nav.yaml'
+    param_dir = LaunchConfiguration(
+        'params_file',
+        default=os.path.join(
+            get_package_share_directory('utbots_nav'),
+            'param',
+            param_file_name))
+    
+    # Load Map
     map_dir = LaunchConfiguration(
         'map',
         default=os.path.join(
@@ -26,37 +39,39 @@ def generate_launch_description():
             'map',
             'corredor0.yaml'))
 
-    param_file_name = BASE_MODEL + '.yaml'
-    param_dir = LaunchConfiguration(
-        'params_file',
-        default=os.path.join(
-            get_package_share_directory('utbots_nav'),
-            'param',
-            param_file_name))
-
+    # Nav2 Bringup
     nav2_launch_file_dir = os.path.join(get_package_share_directory('nav2_bringup'), 'launch')
-
     rviz_config_dir = os.path.join(
         get_package_share_directory('nav2_bringup'),
         'rviz',
         'nav2_default_view.rviz')
 
     return LaunchDescription([
-        DeclareLaunchArgument(
-            'map',
-            default_value=map_dir,
-            description='Full path to map file to load'),
-
-        DeclareLaunchArgument(
-            'params_file',
-            default_value=param_dir,
-            description='Full path to param file to load'),
-
+        # Sim Time Argument
         DeclareLaunchArgument(
             'use_sim_time',
             default_value='false',
             description='Use simulation (Gazebo) clock if true'),
 
+        # RVIZ Argument
+        DeclareLaunchArgument(
+            'use_rviz',
+            default_value='true',
+            description='Use RVIZ2 for visualization'),
+
+        # Navigation Parameters
+        DeclareLaunchArgument(
+            'params_file',
+            default_value=param_dir,
+            description='Full path to param file to load'),
+
+        # Load Map
+        DeclareLaunchArgument(
+            'map',
+            default_value=map_dir,
+            description='Full path to map file to load'),
+
+        # Nav2 Bringup
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource([nav2_launch_file_dir, '/bringup_launch.py']),
             launch_arguments={
@@ -65,6 +80,7 @@ def generate_launch_description():
                 'params_file': param_dir}.items(),
         ),
 
+        # RVIZ2
         Node(
             package='rviz2',
             executable='rviz2',
