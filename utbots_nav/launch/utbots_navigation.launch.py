@@ -24,7 +24,7 @@ def generate_launch_description():
         default=os.path.join(
             get_package_share_directory('utbots_nav'),
             'map',
-            'map.yaml'))
+            'corredor0.yaml'))
 
     param_file_name = BASE_MODEL + '.yaml'
     param_dir = LaunchConfiguration(
