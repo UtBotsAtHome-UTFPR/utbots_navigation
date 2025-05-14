@@ -8,6 +8,7 @@ from launch.conditions import IfCondition
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
+from launch.substitutions import PathJoinSubstitution
 
 '''
 export BASE_MODEL=hestia
@@ -49,7 +50,11 @@ def generate_launch_description():
             package='laser_filters',
             executable='scan_to_scan_filter_chain',
             name='laser_filter',
-            parameters=['box_filter.yaml'],
+                        parameters=[
+                PathJoinSubstitution([
+                    get_package_share_directory("utbots_nav"),
+                    "param", "box_filter.yaml",
+                ])],
             remappings=[
                 ('scan', input_scan),
                 ('scan_filtered', output_scan)

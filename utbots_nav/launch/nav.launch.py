@@ -26,7 +26,7 @@ def generate_launch_description():
             default=os.path.join(
                 get_package_share_directory('utbots_nav'),
                 'map',
-                'map.yaml'))
+                'corredor2.yaml'))
 
     utbots_nav_launch_file_dir = os.path.join(get_package_share_directory('utbots_nav'), 'launch')
 
@@ -70,9 +70,9 @@ def generate_launch_description():
                     get_package_share_directory("utbots_nav"),
                     "param", "box_filter.yaml",
                 ])],
-            # remappings=[
-            #     ('scan', input_scan),
-            #     ('scan_filtered', output_scan)
-            # ]
+            remappings=[
+                ('scan', input_scan),
+                ('scan_filtered', output_scan)
+            ]
         )
         ])

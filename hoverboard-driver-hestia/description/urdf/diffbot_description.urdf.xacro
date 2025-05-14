@@ -19,7 +19,7 @@
     <joint name="${prefix}base_link_to_laser" type="fixed">
       <parent link="${prefix}base_link"/>
       <child link="${prefix}laser"/>
-      <origin xyz="0.2 0 0.06" rpy="0 0 3.14159"/>
+      <origin xyz="0.15 0 0.06" rpy="0 0 3.14159"/>
     </joint>
 
     <!-- scan (often optional) -->
@@ -29,14 +29,6 @@
       <child link="${prefix}scan"/>
       <origin xyz="0 0 0" rpy="0 0 0"/>
     </joint>
-
-    <!-- base_scan -->
-    <!-- <link name="${prefix}base_scan"/>
-    <joint name="${prefix}laser_to_scan" type="fixed">
-      <parent link="${prefix}laser"/>
-      <child link="${prefix}base_scan"/>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-    </joint> -->
 
   </xacro:macro>
 
