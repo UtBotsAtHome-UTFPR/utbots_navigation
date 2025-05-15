@@ -69,6 +69,8 @@ def generate_launch_description():
             description='Define LIDAR serial port'
         ),
 
+        # Include Launches
+
         # Hoverboard Diffbot Driver
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource([utbots_nav_launch_file_dir, '/hoverboard.launch.py']),
@@ -85,6 +87,8 @@ def generate_launch_description():
             PythonLaunchDescriptionSource([utbots_nav_launch_file_dir, '/utbots_navigation.launch.py']),
             launch_arguments={'map': map_dir}.items()  # Pass map as an argument to the mapping launchfile
         ),
+
+        # Run Nodes
         
         # Laser Filter
         Node(
@@ -98,8 +102,8 @@ def generate_launch_description():
                 ])
             ],
             remappings=[
-                ('scan', input_scan),
-                ('scan_filtered', output_scan)
+                ('scan', input_scan_topic),
+                ('scan_filtered', filtered_scan_topic)
             ]
         ),
         
@@ -114,7 +118,8 @@ def generate_launch_description():
                     get_package_share_directory("utbots_nav"),
                     "param", "ekf_filter.yaml",
                 ])
-            ]
+            ],
+            condition=IfCondition(use_imu)
         ),
         
         ])
