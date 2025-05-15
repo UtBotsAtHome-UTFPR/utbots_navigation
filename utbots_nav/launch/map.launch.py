@@ -60,6 +60,20 @@ def generate_launch_description():
                 ('scan_filtered', output_scan)
             ]
         ),
+        # Kalman Filter for IMU integration to Odom
+        Node(
+            package='robot_localization',
+            executable='ekf_localization_node',
+            name='ekf_filter_node',
+            output='screen',
+            parameters=[
+                PathJoinSubstitution([
+                    get_package_share_directory("utbots_nav"),
+                    "param", "ekf_filter.yaml",
+                ])
+            ]
+        ),
+        ])
         # RVIZ2
         Node(
             package='rviz2',
