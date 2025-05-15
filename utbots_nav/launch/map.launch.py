@@ -16,13 +16,17 @@ export BASE_MODEL=hestia
 
 def generate_launch_description():
     # Arguments
-    input_scan = LaunchConfiguration('input_scan_topic')
-    output_scan = LaunchConfiguration('filtered_scan_topic')
+    input_scan_topic = LaunchConfiguration('input_scan_topic')
+    filtered_scan_topic = LaunchConfiguration('filtered_scan_topic')
+    use_imu = LaunchConfiguration('use_imu')
+    lidar_port = LaunchConfiguration('lidar_port')
 
     utbots_nav_launch_file_dir = os.path.join(get_package_share_directory('utbots_nav'), 'launch')
 
     return LaunchDescription([
         # Launch Arguments
+
+        # Scan topics
         DeclareLaunchArgument(
             'input_scan_topic',
             default_value='scan',
@@ -33,18 +37,41 @@ def generate_launch_description():
             default_value='scan_filtered',
             description='Output (filtered) LaserScan topic name'
         ),
+
+        # Use IMU
+        DeclareLaunchArgument(
+            'use_imu',
+            default_value='true',
+            description='Set to true to launch robot_localization'
+        ),
+
+        # Define Lidar Serial Port
+        DeclareLaunchArgument(
+            'lidar_port',
+            default_value='/dev/serial/by-id/usb-Silicon_Labs_CP2102_USB_to_UART_Bridge_Controller_0001-if00-port0',
+            description='Define LIDAR serial port'
+        ),
+
+        # Include Launches
+
         # Hoverboard Diffbot Driver
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource([utbots_nav_launch_file_dir, '/hoverboard.launch.py']),
         ),
+
         # LIDAR Driver
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource([utbots_nav_launch_file_dir, '/rplidar.launch.py']),
+            launch_arguments={'lidar_port': lidar_port}.items()  # Pass lidar_port as an argument to the mapping launchfile
         ),
+
         # Mapping launchfile
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource([utbots_nav_launch_file_dir, '/utbots_mapping.launch.py']),
         ),
+
+        # Run Nodes
+
         # Laser Filter
         Node(
             package='laser_filters',
@@ -56,10 +83,11 @@ def generate_launch_description():
                     "param", "box_filter.yaml",
                 ])],
             remappings=[
-                ('scan', input_scan),
-                ('scan_filtered', output_scan)
+                ('scan', input_scan_topic),
+                ('scan_filtered', filtered_scan_topic)
             ]
         ),
+
         # Kalman Filter for IMU integration to Odom
         Node(
             package='robot_localization',
@@ -71,9 +99,10 @@ def generate_launch_description():
                     get_package_share_directory("utbots_nav"),
                     "param", "ekf_filter.yaml",
                 ])
-            ]
+            ],
+            condition=IfCondition(use_imu)
         ),
-        ])
+
         # RVIZ2
         Node(
             package='rviz2',
