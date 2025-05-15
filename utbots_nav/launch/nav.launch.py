@@ -89,7 +89,7 @@ def generate_launch_description():
             launch_arguments={'map': map_dir}.items(),  # Pass map as an argument to the mapping launchfile
             remappings=[
                    ('/odom', IfCondition(LaunchConfiguration('use_imu'), '/odometry/filtered', '/odom'))  # Remap odom topic if imu
-            ],
+            ]
         ),
 
         # Run Nodes
