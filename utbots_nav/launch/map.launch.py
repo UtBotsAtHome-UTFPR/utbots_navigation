@@ -2,13 +2,15 @@ import os
 
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument
+from launch.actions import DeclareLaunchArgument, GroupAction
 from launch.actions import IncludeLaunchDescription
 from launch.conditions import IfCondition
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
 from launch.substitutions import PathJoinSubstitution
+from launch_ros.actions import SetRemap
+
 
 '''
 export BASE_MODEL=hestia
@@ -66,12 +68,21 @@ def generate_launch_description():
         ),
 
         # Mapping launchfile
-        IncludeLaunchDescription(
-            PythonLaunchDescriptionSource([utbots_nav_launch_file_dir, '/utbots_mapping.launch.py']),
-            remappings=[
-                   ('/odom', IfCondition(LaunchConfiguration('use_imu'), '/odometry/filtered', '/odom'))  # Remap odom topic if imu
-            ]    
-        ),
+        GroupAction([
+            SetRemap('/odom', '/odometry/filtered'),
+            IncludeLaunchDescription(
+                PythonLaunchDescriptionSource([utbots_nav_launch_file_dir, '/utbots_navigation.launch.py']),
+                launch_arguments={'map': map_dir}.items(),
+            ),
+        ], condition=IfCondition(use_imu)),
+
+        GroupAction([
+            SetRemap('/odom', '/odom'),
+            IncludeLaunchDescription(
+                PythonLaunchDescriptionSource([utbots_nav_launch_file_dir, '/utbots_navigation.launch.py']),
+                launch_arguments={'map': map_dir}.items(),
+            ),
+        ], condition=UnlessCondition(use_imu)),
 
         # Run Nodes
 
@@ -94,7 +105,7 @@ def generate_launch_description():
         # Kalman Filter for IMU integration to Odom
         Node(
             package='robot_localization',
-            executable='ekf_localization_node',
+            executable='ekf_node',
             name='ekf_filter_node',
             output='screen',
             parameters=[
