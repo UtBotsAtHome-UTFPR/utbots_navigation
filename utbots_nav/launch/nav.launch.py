@@ -39,6 +39,7 @@ def generate_launch_description():
             default_value='scan_filtered',
             description='Output (filtered) LaserScan topic name'
         ),
+        
         # Load Map
         DeclareLaunchArgument(
             'map',
@@ -48,7 +49,7 @@ def generate_launch_description():
                 'corredor2.yaml'),
             description='Full path to map file to load'),
 
-         # Use IMU
+        # Use IMU
         DeclareLaunchArgument(
             'use_imu',
             default_value='true',
@@ -85,7 +86,10 @@ def generate_launch_description():
         # Mapping launchfile
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource([utbots_nav_launch_file_dir, '/utbots_navigation.launch.py']),
-            launch_arguments={'map': map_dir}.items()  # Pass map as an argument to the mapping launchfile
+            launch_arguments={'map': map_dir}.items(),  # Pass map as an argument to the mapping launchfile
+            remappings=[
+                   ('/odom', IfCondition(LaunchConfiguration('use_imu'), '/odometry/filtered', '/odom'))  # Remap odom topic if imu
+            ],
         ),
 
         # Run Nodes
