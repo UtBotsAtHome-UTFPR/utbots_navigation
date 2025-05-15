@@ -68,9 +68,9 @@ def generate_launch_description():
         # Mapping launchfile
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource([utbots_nav_launch_file_dir, '/utbots_mapping.launch.py']),
-                remappings=[
+            remappings=[
                    ('/odom', IfCondition(LaunchConfiguration('use_imu'), '/odometry/filtered', '/odom'))  # Remap odom topic if imu
-    ]
+            ]    
         ),
 
         # Run Nodes
