@@ -35,7 +35,6 @@ For the MPU6050 IMU integration, you must install and setup microROS:
 source /opt/ros/$ROS_DISTRO/setup.bash
 
 # Download the micro-ROS tools
-mkdir microros_ws
 cd <ros2_ws>
 git clone -b $ROS_DISTRO https://github.com/micro-ROS/micro_ros_setup.git src/micro_ros_setup
 
