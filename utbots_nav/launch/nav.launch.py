@@ -65,14 +65,28 @@ def generate_launch_description():
             package='laser_filters',
             executable='scan_to_scan_filter_chain',
             name='laser_filter',
-                        parameters=[
+            parameters=[
                 PathJoinSubstitution([
                     get_package_share_directory("utbots_nav"),
                     "param", "box_filter.yaml",
-                ])],
+                ])
+            ],
             remappings=[
                 ('scan', input_scan),
                 ('scan_filtered', output_scan)
             ]
-        )
+        ),
+        # Kalman Filter for IMU integration to Odom
+        Node(
+            package='robot_localization',
+            executable='ekf_localization_node',
+            name='ekf_filter_node',
+            output='screen',
+            parameters=[
+                PathJoinSubstitution([
+                    get_package_share_directory("utbots_nav"),
+                    "param", "ekf_filter.yaml",
+                ])
+            ]
+        ),
         ])
