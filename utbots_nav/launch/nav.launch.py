@@ -2,7 +2,7 @@ import os
 
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument, GroupAction
+from launch.actions import DeclareLaunchArgument, GroupAction, ExecuteProcess, TimerAction
 from launch.actions import IncludeLaunchDescription
 from launch.conditions import IfCondition, UnlessCondition
 from launch.launch_description_sources import PythonLaunchDescriptionSource
@@ -23,6 +23,8 @@ def generate_launch_description():
     use_imu = LaunchConfiguration('use_imu')
     use_rviz = LaunchConfiguration('use_rviz')
     lidar_port = LaunchConfiguration('lidar_port')
+    imu_port = LaunchConfiguration('imu_port')
+
 
     utbots_nav_launch_file_dir = os.path.join(get_package_share_directory('utbots_nav'), 'launch')
 
@@ -64,10 +66,17 @@ def generate_launch_description():
             description='Use RVIZ2 for visualization'
         ),
 
-        # Launch with RVIZ
+        # Lidar port
         DeclareLaunchArgument(
             'lidar_port',
             default_value='/dev/serial/by-id/usb-Silicon_Labs_CP2102_USB_to_UART_Bridge_Controller_0001-if00-port0',
+            description='Define LIDAR serial port'
+        ),
+
+        # IMU port
+        DeclareLaunchArgument(
+            'imu_port',
+            default_value='/dev/ttyUSB0',
             description='Define LIDAR serial port'
         ),
 
@@ -119,20 +128,35 @@ def generate_launch_description():
                 ('scan_filtered', filtered_scan_topic)
             ]
         ),
+
+        # microROS for IMU
+        # TimerAction(
+        #     period = 3.0,
+        #     actions=[
+        #         ExecuteProcess(
+        #         cmd=[
+        #             'ros2', 'run', 'micro_ros_agent', 'micro_ros_agent',
+        #             'serial', '--dev', LaunchConfiguration('imu_port')
+        #         ],
+        #         output='screen'
+        #         )
+        #     ],
+        #     condition=IfCondition(use_imu)
+        # ),
         
-        # Kalman Filter for IMU integration to Odom
-        Node(
-            package='robot_localization',
-            executable='ekf_node',
-            name='ekf_filter_node',
-            output='screen',
-            parameters=[
-                PathJoinSubstitution([
-                    get_package_share_directory("utbots_nav"),
-                    "param", "ekf_filter.yaml",
-                ])
-            ],
-            condition=IfCondition(use_imu)
-        ),
+        # # Kalman Filter for IMU integration to Odom
+        # Node(
+        #     package='robot_localization',
+        #     executable='ekf_node',
+        #     name='ekf_filter_node',
+        #     output='screen',
+        #     parameters=[
+        #         PathJoinSubstitution([
+        #             get_package_share_directory("utbots_nav"),
+        #             "param", "ekf_filter.yaml",
+        #         ])
+        #     ],
+        #     condition=IfCondition(use_imu)
+        # ),
         
         ])
