@@ -15,6 +15,8 @@ from launch_ros.actions import SetRemap
 export BASE_MODEL=hestia
 '''
 
+BASE_MODEL = os.environ['BASE_MODEL']
+
 def generate_launch_description():
     # Arguments
     input_scan_topic = LaunchConfiguration('input_scan_topic')
@@ -24,7 +26,6 @@ def generate_launch_description():
     use_rviz = LaunchConfiguration('use_rviz')
     lidar_port = LaunchConfiguration('lidar_port')
     imu_port = LaunchConfiguration('imu_port')
-
 
     utbots_nav_launch_file_dir = os.path.join(get_package_share_directory('utbots_nav'), 'launch')
 
@@ -90,25 +91,14 @@ def generate_launch_description():
         # LIDAR Driver
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource([utbots_nav_launch_file_dir, '/rplidar.launch.py']),
-            launch_arguments={'lidar_port': lidar_port}.items()  # Pass map as an argument to the mapping launchfile
+            launch_arguments={'lidar_port': lidar_port}.items(),  # Pass map as an argument to the mapping launchfile
         ),
         
-        # Mapping launchfile
-        GroupAction([
-            SetRemap('/odom', '/odometry/filtered'),
-            IncludeLaunchDescription(
-                PythonLaunchDescriptionSource([utbots_nav_launch_file_dir, '/utbots_navigation.launch.py']),
-                launch_arguments={'map': map_dir}.items(),
-            ),
-        ], condition=IfCondition(use_imu)),
-
-        GroupAction([
-            SetRemap('/odom', '/odom'),
-            IncludeLaunchDescription(
-                PythonLaunchDescriptionSource([utbots_nav_launch_file_dir, '/utbots_navigation.launch.py']),
-                launch_arguments={'map': map_dir}.items(),
-            ),
-        ], condition=UnlessCondition(use_imu)),
+        # # Mapping launchfile
+        IncludeLaunchDescription(
+            PythonLaunchDescriptionSource([utbots_nav_launch_file_dir, '/utbots_navigation.launch.py']),
+            launch_arguments={'map': map_dir}.items(),
+        ),
 
         # Run Nodes
         
@@ -130,33 +120,36 @@ def generate_launch_description():
         ),
 
         # microROS for IMU
-        # TimerAction(
-        #     period = 3.0,
-        #     actions=[
-        #         ExecuteProcess(
-        #         cmd=[
-        #             'ros2', 'run', 'micro_ros_agent', 'micro_ros_agent',
-        #             'serial', '--dev', LaunchConfiguration('imu_port')
-        #         ],
-        #         output='screen'
-        #         )
-        #     ],
-        #     condition=IfCondition(use_imu)
-        # ),
+        TimerAction(
+            period = 3.0,
+            actions=[
+                ExecuteProcess(
+                cmd=[
+                    'ros2', 'run', 'micro_ros_agent', 'micro_ros_agent',
+                    'serial', '--dev', LaunchConfiguration('imu_port')
+                ],
+                output='screen'
+                )
+            ],
+            condition=IfCondition(use_imu)
+        ),
         
         # # Kalman Filter for IMU integration to Odom
-        # Node(
-        #     package='robot_localization',
-        #     executable='ekf_node',
-        #     name='ekf_filter_node',
-        #     output='screen',
-        #     parameters=[
-        #         PathJoinSubstitution([
-        #             get_package_share_directory("utbots_nav"),
-        #             "param", "ekf_filter.yaml",
-        #         ])
-        #     ],
-        #     condition=IfCondition(use_imu)
-        # ),
+        Node(
+            package='robot_localization',
+            executable='ekf_node',
+            name='ekf_filter_node',
+            output='screen',
+            parameters=[
+                PathJoinSubstitution([
+                    get_package_share_directory("utbots_nav"),
+                    "param", "ekf_filter.yaml",
+                ])
+            ],
+            remappings=[
+                ('/odom', '/hoverboard_base_controller/odom')
+            ],
+            condition=IfCondition(use_imu)
+        ),
         
         ])

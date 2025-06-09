@@ -52,8 +52,11 @@ def generate_launch_description():
         executable="ros2_control_node",
         parameters=[robot_description, robot_controllers],
         output="both",
-
+        remappings=[
+            ('/hoverboard_controller/odom', '/odom')
+        ],
     )
+
     robot_state_pub_node = Node(
         package="robot_state_publisher",
         executable="robot_state_publisher",
@@ -61,6 +64,7 @@ def generate_launch_description():
         parameters=[robot_description],
         remappings=[
             ("/hoverboard_base_controller/cmd_vel_unstamped", "/cmd_vel"),
+            ('/hoverboard_controller/odom', '/odom')
         ],
     )
 
@@ -69,22 +73,28 @@ def generate_launch_description():
         package="twist_mux",
         executable="twist_mux",
         parameters=[twist_mux_params],
-        remappings=[('/cmd_vel_out', '/hoverboard_base_controller/cmd_vel_unstamped'),
-            ]
+        remappings=[
+            ('/cmd_vel_out', '/hoverboard_base_controller/cmd_vel_unstamped'),
+            ('/hoverboard_controller/odom', '/odom')
+        ]
     )
 
     joint_state_broadcaster_spawner = Node(
         package="controller_manager",
         executable="spawner",
         arguments=["joint_state_broadcaster", "--controller-manager", "/controller_manager"],
-        
+        remappings=[
+            ('/hoverboard_controller/odom', '/odom')
+        ]
     )
 
     robot_controller_spawner = Node(
         package="controller_manager",
         executable="spawner",
         arguments=["hoverboard_base_controller", "--controller-manager", "/controller_manager"],
-        
+        remappings=[
+            ('/hoverboard_controller/odom', '/odom')
+        ]     
     )
 
     # Delay start of robot_controller after joint_state_broadcaster

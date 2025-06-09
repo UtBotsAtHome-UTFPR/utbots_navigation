@@ -16,14 +16,13 @@ export BASE_MODEL=hestia
 BASE_MODEL = os.environ['BASE_MODEL']
 
 def generate_launch_description():
-    # Sim Time Argument
+    # Arguments
     use_sim_time = LaunchConfiguration('use_sim_time', default='false')
-    
-    # RVIZ Argument
     use_rviz = LaunchConfiguration('use_rviz', default='true')
+    use_imu = LaunchConfiguration('use_imu')
 
     # Navigation Parameters
-    param_file_name = BASE_MODEL + '_nav.yaml'
+    param_file_name = BASE_MODEL + '_nav_imu.yaml'
     param_dir = LaunchConfiguration(
         'params_file',
         default=os.path.join(
@@ -88,5 +87,5 @@ def generate_launch_description():
             arguments=['-d', rviz_config_dir],
             parameters=[{'use_sim_time': use_sim_time}],
             condition=IfCondition(use_rviz),
-            output='screen'),
+            output='log'),
     ])
