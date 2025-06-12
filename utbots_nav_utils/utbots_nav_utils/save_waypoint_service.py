@@ -3,11 +3,17 @@
 import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import PoseWithCovarianceStamped
-from utbots_srvs.srv import SaveWaypoint  # Update with your actual package name
+from utbots_srvs.srv import SetString  # Update with your actual package name
 
 import yaml
 import os
 import subprocess
+
+from std_msgs.msg import Bool
+from std_srvs.srv import SetBool
+from rclpy.action import ActionServer
+from std_msgs.msg import String
+
 
 import ament_index_python
 ament_index_python.get_package_share_directory
@@ -22,7 +28,7 @@ class WaypointSaver(Node):
             10
         )
         self.path=(ament_index_python.get_package_share_directory('utbots_nav').rsplit('install/')[0]+
-                   "src/utbots_nav/map/")
+                   "src/utbots_navigation/utbots_nav/map/")
         print(self.path)
         # self.waypoint_file=(os.system("ros2 param get /map_server yaml_filename"))#.rsplit(".yaml")+"_waypoints.yaml"
         map_file = subprocess.check_output(
@@ -32,18 +38,23 @@ class WaypointSaver(Node):
         self.waypoint_file =map_file.rsplit(".yaml")[0]+"_waypoints.yaml"
         print(self.waypoint_file)
         print(map_file)
-        self.srv = self.create_service(SaveWaypoint, 'save_waypoint', self.save_waypoint_callback)
+        # self.srv = self.create_service(SaveWaypoint, '/utbots/utbots_nav/save_waypoint', self.save_waypoint_callback)
+        self.srv = self.create_service(
+            SetString,
+            '/utbots/utbots_nav/save_waypoint',
+            self.save_waypoint_callback)
+
         self.get_logger().info('Waypoint saver service ready.')
 
     def pose_callback(self, msg):
         self.current_pose = msg.pose.pose
 
     def save_waypoint_callback(self, request, response):
-        name = request.name
+        name = request.data
 
         if self.current_pose is None:
             response.success = False
-            response.message = 'No pose received yet.'
+            # response.message = 'No pose received yet.'
             return response
 
         pose_dict = {
@@ -78,7 +89,7 @@ class WaypointSaver(Node):
 
         self.get_logger().info(f"Saved waypoint '{name}'")
         response.success = True
-        response.message = f"Waypoint '{name}' saved successfully."
+        # response.message = f"Waypoint '{name}' saved successfully."
         return response
 
 def main():
