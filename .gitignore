@@ -4,3 +4,6 @@ devel/*
 *.out
 *.o
 ydlidar_ros_driver/YDLidar-SDK/build/CMakeCache.txt
+/.utbots_nav_utils
+utbots_nav/map/world.pgm
+utbots_nav/map/world.yaml
