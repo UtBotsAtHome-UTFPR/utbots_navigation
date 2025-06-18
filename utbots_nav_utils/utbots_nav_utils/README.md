@@ -102,7 +102,7 @@ For testing with the real robot, need adjustments.
 ros2 run utbots_nav_utils nav_to_wp
 #to call the action goal:
 ros2 action send_goal /navigate_to_way_point utbots_actions/action/NavigateToWayPoint \
-#change <waypoint_name> to the desired waypoint (like: bathroom, living_room, kitchen, etc. (sic.*))
+ #change <waypoint_name> to the desired waypoint (like: bathroom, living_room, kitchen, etc. (sic.*))
 "{waypoint: {data: '<waypoint_name>'}}" #like "{waypoint: {data: 'bathroom'}}"
 ```
 ### Save Waypoint Service (and Server):

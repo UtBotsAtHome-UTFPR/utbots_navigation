@@ -43,14 +43,15 @@ def launch_rqt_tools(context, *args, **kwargs):
 #                 proc.kill()
 
 def launch_setup(context, *args, **kwargs):
-    map_name = LaunchConfiguration('map_name').perform(context)
+    map_name = LaunchConfiguration('map_name',default='pitaco').perform(context)
     lidar_port = LaunchConfiguration('lidar_port',default="/dev/ttyUSB0").perform(context)
+    use_imu = LaunchConfiguration('use_imu',default='false').perform(context)
 
     map_file = os.path.join(
         get_package_share_directory('utbots_nav').rsplit('install/')[0],
         "src","utbots_navigation" ,"utbots_nav", "map" #src/utbots_navigation/utbots_nav/map/
     ) + "/" + map_name + ".yaml"
-
+    print(map_file)
 #    ros2 launch utbots_nav map.launch.py    ## Launch all mapping packages (Gmapping)
     launch_dir_utbots_nav = os.path.join(
         get_package_share_directory('utbots_nav'), 'launch')
@@ -59,7 +60,7 @@ def launch_setup(context, *args, **kwargs):
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(os.path.join(launch_dir_utbots_nav, 'nav.launch.py')),
             launch_arguments={'map': map_file, 
-                              'use_imu': False,
+                              'use_imu': use_imu,
                               'lidar_port': lidar_port }.items()
         ),
     
@@ -93,8 +94,14 @@ def launch_setup(context, *args, **kwargs):
 
 def generate_launch_description():
     return LaunchDescription([
-        DeclareLaunchArgument('map_name', default_value='world'),
+        DeclareLaunchArgument('map_name', default_value='pitaco'),
+        DeclareLaunchArgument('lidar_port', default_value='wor/dev/ttyUSB0ld'),
+        DeclareLaunchArgument('use_imu', default_value='false'),
+
         OpaqueFunction(function=launch_setup),
         OpaqueFunction(function=launch_rqt_tools),
         # OpaqueFunction(function=on_shutdown),
     ])
+    # map_name = LaunchConfiguration('map_name',default='pitaco').perform(context)
+    # lidar_port = LaunchConfiguration('lidar_port',default="/dev/ttyUSB0").perform(context)
+    # use_imu = LaunchConfiguration('use_imu',default='false').perform(context)
