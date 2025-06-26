@@ -22,7 +22,7 @@ def generate_launch_description():
     use_imu = LaunchConfiguration('use_imu')
 
     # Navigation Parameters
-    param_file_name = BASE_MODEL + '_nav_imu.yaml'
+    param_file_name = BASE_MODEL + '_nav.yaml'
     param_dir = LaunchConfiguration(
         'params_file',
         default=os.path.join(
