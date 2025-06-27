@@ -1,0 +1,11 @@
+source;share/hoverboard_driver/hook/cmake_prefix_path.ps1
+source;share/hoverboard_driver/hook/cmake_prefix_path.dsv
+source;share/hoverboard_driver/hook/cmake_prefix_path.sh
+source;share/hoverboard_driver/hook/ld_library_path_lib.ps1
+source;share/hoverboard_driver/hook/ld_library_path_lib.dsv
+source;share/hoverboard_driver/hook/ld_library_path_lib.sh
+source;share/hoverboard_driver/local_setup.bash
+source;share/hoverboard_driver/local_setup.dsv
+source;share/hoverboard_driver/local_setup.ps1
+source;share/hoverboard_driver/local_setup.sh
+source;share/hoverboard_driver/local_setup.zsh

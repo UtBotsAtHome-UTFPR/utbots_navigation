@@ -1,0 +1,101 @@
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /home/laser/ros_env/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Found hardware_interface: 2.51.0 (/opt/ros/humble/share/hardware_interface/cmake)
+-- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+-- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+-- Found FastRTPS: /opt/ros/humble/include  
+-- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+-- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Looking for C++ include pthread.h
+-- Looking for C++ include pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Found control_toolbox: 3.6.1 (/opt/ros/humble/share/control_toolbox/cmake)
+-- Found ament_cmake_gtest: 1.3.11 (/opt/ros/humble/share/ament_cmake_gtest/cmake)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/laser/ros2_ws/src/utbots_navigation/build/hoverboard_driver
+[ 33%] [32mBuilding CXX object CMakeFiles/hoverboard_driver.dir/hardware/pid.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/hoverboard_driver.dir/hardware/hoverboard_driver.cpp.o[0m
+[100%] [32m[1mLinking CXX shared library libhoverboard_driver.so[0m
+[100%] Built target hoverboard_driver
+-- Install configuration: ""
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/hoverboard_driver.xml
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/include/hoverboard_driver
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/include/hoverboard_driver/hoverboard_driver
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/include/hoverboard_driver/hoverboard_driver/protocol.hpp
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/include/hoverboard_driver/hoverboard_driver/config.hpp
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/include/hoverboard_driver/hoverboard_driver/hoverboard_driver.hpp
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/include/hoverboard_driver/hoverboard_driver/pid.hpp
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/launch
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/launch/view_robot.launch.py
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/ros2_control
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/ros2_control/gazebo_control.xacro
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/ros2_control/hoverboard_driver.ros2_control.xacro
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/urdf
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/urdf/diffbot.urdf.xacro
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/urdf/tmp_caster_wheels_old.txt
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/urdf/diffbot_description.urdf.xacro
+-- Up-to-date: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/launch
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/launch/diffbot.launch.py
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/launch/laser_filter.launch.py
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/launch/robot_state_publisher.launch.py
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/launch/simulation.launch.py
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/launch/cmp.launch.py
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/launch/navigation_launch.py
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/launch/joystick.launch.py
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/launch/localization_launch.py
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/launch/keepout_filter.launch.py
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/launch/online_async_launch.py
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/config
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/config/turtle_params.yaml
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/config/gaz_ros2_ctl_use_sim.yaml
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/config/nav2_params.yaml
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/config/nav2_params_bkp.yaml
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/config/keepout_params.yaml
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/config/twist_mux.yaml
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/config/joystick.yaml
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/config/hoverboard_controllers.yaml
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/config/gazebo_params.yaml
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/config/box_laser_filter.yaml
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/config/mapper_params_online_async.yaml
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/lib/libhoverboard_driver.so
+-- Set runtime path of "/home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/lib/libhoverboard_driver.so" to ""
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/environment/library_path.sh
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/environment/library_path.dsv
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/ament_index/resource_index/package_run_dependencies/hoverboard_driver
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/ament_index/resource_index/parent_prefix_path/hoverboard_driver
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/environment/ament_prefix_path.sh
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/environment/ament_prefix_path.dsv
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/environment/path.sh
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/environment/path.dsv
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/local_setup.bash
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/local_setup.sh
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/local_setup.zsh
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/local_setup.dsv
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/package.dsv
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/ament_index/resource_index/packages/hoverboard_driver
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/hoverboard_driver
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/cmake/export_hoverboard_driverExport.cmake
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/cmake/export_hoverboard_driverExport-noconfig.cmake
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/cmake/ament_cmake_export_targets-extras.cmake
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/cmake/hoverboard_driverConfig.cmake
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/cmake/hoverboard_driverConfig-version.cmake
+-- Installing: /home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/package.xml

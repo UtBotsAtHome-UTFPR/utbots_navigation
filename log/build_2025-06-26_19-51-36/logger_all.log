@@ -1,0 +1,321 @@
+[0.108s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.108s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7ba9f8d65390>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7ba9f8d64dc0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7ba9f8d64dc0>>)
+[0.264s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.264s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.264s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.264s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.264s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.264s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.264s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/laser/ros2_ws/src/utbots_navigation'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(hoverboard-driver-hestia) by extensions ['ignore', 'ignore_ament_install']
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(hoverboard-driver-hestia) by extension 'ignore'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(hoverboard-driver-hestia) by extension 'ignore_ament_install'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(hoverboard-driver-hestia) by extensions ['colcon_pkg']
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(hoverboard-driver-hestia) by extension 'colcon_pkg'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(hoverboard-driver-hestia) by extensions ['colcon_meta']
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(hoverboard-driver-hestia) by extension 'colcon_meta'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(hoverboard-driver-hestia) by extensions ['ros']
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(hoverboard-driver-hestia) by extension 'ros'
+[0.280s] DEBUG:colcon.colcon_core.package_identification:Package 'hoverboard-driver-hestia' with type 'ros.ament_cmake' and name 'hoverboard_driver'
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver) by extensions ['ignore', 'ignore_ament_install']
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver) by extension 'ignore'
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver) by extension 'ignore_ament_install'
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver) by extensions ['colcon_pkg']
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver) by extension 'colcon_pkg'
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver) by extensions ['colcon_meta']
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver) by extension 'colcon_meta'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver) by extensions ['ros']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver) by extension 'ros'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver) by extensions ['cmake', 'python']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver) by extension 'cmake'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver) by extension 'python'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver) by extensions ['python_setup_py']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver) by extension 'python_setup_py'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/include) by extensions ['ignore', 'ignore_ament_install']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/include) by extension 'ignore'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/include) by extension 'ignore_ament_install'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/include) by extensions ['colcon_pkg']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/include) by extension 'colcon_pkg'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/include) by extensions ['colcon_meta']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/include) by extension 'colcon_meta'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/include) by extensions ['ros']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/include) by extension 'ros'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/include) by extensions ['cmake', 'python']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/include) by extension 'cmake'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/include) by extension 'python'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/include) by extensions ['python_setup_py']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/include) by extension 'python_setup_py'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/lib) by extensions ['ignore', 'ignore_ament_install']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/lib) by extension 'ignore'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/lib) by extension 'ignore_ament_install'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/lib) by extensions ['colcon_pkg']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/lib) by extension 'colcon_pkg'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/lib) by extensions ['colcon_meta']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/lib) by extension 'colcon_meta'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/lib) by extensions ['ros']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/lib) by extension 'ros'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/lib) by extensions ['cmake', 'python']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/lib) by extension 'cmake'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/lib) by extension 'python'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/lib) by extensions ['python_setup_py']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/lib) by extension 'python_setup_py'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/src) by extensions ['ignore', 'ignore_ament_install']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/src) by extension 'ignore'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/src) by extension 'ignore_ament_install'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/src) by extensions ['colcon_pkg']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/src) by extension 'colcon_pkg'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/src) by extensions ['colcon_meta']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/src) by extension 'colcon_meta'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/src) by extensions ['ros']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/src) by extension 'ros'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/src) by extensions ['cmake', 'python']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/src) by extension 'cmake'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/src) by extension 'python'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/src) by extensions ['python_setup_py']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/src) by extension 'python_setup_py'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/test) by extensions ['ignore', 'ignore_ament_install']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/test) by extension 'ignore'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/test) by extension 'ignore_ament_install'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/test) by extensions ['colcon_pkg']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/test) by extension 'colcon_pkg'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/test) by extensions ['colcon_meta']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/test) by extension 'colcon_meta'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/test) by extensions ['ros']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/test) by extension 'ros'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/test) by extensions ['cmake', 'python']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/test) by extension 'cmake'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/test) by extension 'python'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/test) by extensions ['python_setup_py']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(mpu6050driver/test) by extension 'python_setup_py'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(utbots_nav) by extensions ['ignore', 'ignore_ament_install']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(utbots_nav) by extension 'ignore'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(utbots_nav) by extension 'ignore_ament_install'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(utbots_nav) by extensions ['colcon_pkg']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(utbots_nav) by extension 'colcon_pkg'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(utbots_nav) by extensions ['colcon_meta']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(utbots_nav) by extension 'colcon_meta'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(utbots_nav) by extensions ['ros']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(utbots_nav) by extension 'ros'
+[0.284s] DEBUG:colcon.colcon_core.package_identification:Package 'utbots_nav' with type 'ros.ament_cmake' and name 'utbots_nav'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(utbots_nav_utils) by extensions ['ignore', 'ignore_ament_install']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(utbots_nav_utils) by extension 'ignore'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(utbots_nav_utils) by extension 'ignore_ament_install'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(utbots_nav_utils) by extensions ['colcon_pkg']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(utbots_nav_utils) by extension 'colcon_pkg'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(utbots_nav_utils) by extensions ['colcon_meta']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(utbots_nav_utils) by extension 'colcon_meta'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(utbots_nav_utils) by extensions ['ros']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(utbots_nav_utils) by extension 'ros'
+[0.285s] DEBUG:colcon.colcon_core.package_identification:Package 'utbots_nav_utils' with type 'ros.ament_python' and name 'utbots_nav_utils'
+[0.285s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.285s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.285s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.285s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.285s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.306s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.306s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.308s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 11 installed packages in /home/laser/ros2_ws/install
+[0.309s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 351 installed packages in /opt/ros/humble
+[0.318s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.358s] Level 5:colcon.colcon_core.verb:set package 'hoverboard_driver' build argument 'cmake_args' from command line to 'None'
+[0.358s] Level 5:colcon.colcon_core.verb:set package 'hoverboard_driver' build argument 'cmake_target' from command line to 'None'
+[0.358s] Level 5:colcon.colcon_core.verb:set package 'hoverboard_driver' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.358s] Level 5:colcon.colcon_core.verb:set package 'hoverboard_driver' build argument 'cmake_clean_cache' from command line to 'False'
+[0.358s] Level 5:colcon.colcon_core.verb:set package 'hoverboard_driver' build argument 'cmake_clean_first' from command line to 'False'
+[0.358s] Level 5:colcon.colcon_core.verb:set package 'hoverboard_driver' build argument 'cmake_force_configure' from command line to 'False'
+[0.358s] Level 5:colcon.colcon_core.verb:set package 'hoverboard_driver' build argument 'ament_cmake_args' from command line to 'None'
+[0.358s] Level 5:colcon.colcon_core.verb:set package 'hoverboard_driver' build argument 'catkin_cmake_args' from command line to 'None'
+[0.358s] Level 5:colcon.colcon_core.verb:set package 'hoverboard_driver' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.358s] DEBUG:colcon.colcon_core.verb:Building package 'hoverboard_driver' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/laser/ros2_ws/src/utbots_navigation/build/hoverboard_driver', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver', 'merge_install': False, 'path': '/home/laser/ros2_ws/src/utbots_navigation/hoverboard-driver-hestia', 'symlink_install': False, 'test_result_base': None}
+[0.359s] Level 5:colcon.colcon_core.verb:set package 'utbots_nav' build argument 'cmake_args' from command line to 'None'
+[0.359s] Level 5:colcon.colcon_core.verb:set package 'utbots_nav' build argument 'cmake_target' from command line to 'None'
+[0.359s] Level 5:colcon.colcon_core.verb:set package 'utbots_nav' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.359s] Level 5:colcon.colcon_core.verb:set package 'utbots_nav' build argument 'cmake_clean_cache' from command line to 'False'
+[0.359s] Level 5:colcon.colcon_core.verb:set package 'utbots_nav' build argument 'cmake_clean_first' from command line to 'False'
+[0.359s] Level 5:colcon.colcon_core.verb:set package 'utbots_nav' build argument 'cmake_force_configure' from command line to 'False'
+[0.359s] Level 5:colcon.colcon_core.verb:set package 'utbots_nav' build argument 'ament_cmake_args' from command line to 'None'
+[0.359s] Level 5:colcon.colcon_core.verb:set package 'utbots_nav' build argument 'catkin_cmake_args' from command line to 'None'
+[0.359s] Level 5:colcon.colcon_core.verb:set package 'utbots_nav' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.359s] DEBUG:colcon.colcon_core.verb:Building package 'utbots_nav' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/laser/ros2_ws/src/utbots_navigation/build/utbots_nav', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/laser/ros2_ws/src/utbots_navigation/install/utbots_nav', 'merge_install': False, 'path': '/home/laser/ros2_ws/src/utbots_navigation/utbots_nav', 'symlink_install': False, 'test_result_base': None}
+[0.359s] Level 5:colcon.colcon_core.verb:set package 'utbots_nav_utils' build argument 'cmake_args' from command line to 'None'
+[0.359s] Level 5:colcon.colcon_core.verb:set package 'utbots_nav_utils' build argument 'cmake_target' from command line to 'None'
+[0.359s] Level 5:colcon.colcon_core.verb:set package 'utbots_nav_utils' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.359s] Level 5:colcon.colcon_core.verb:set package 'utbots_nav_utils' build argument 'cmake_clean_cache' from command line to 'False'
+[0.359s] Level 5:colcon.colcon_core.verb:set package 'utbots_nav_utils' build argument 'cmake_clean_first' from command line to 'False'
+[0.359s] Level 5:colcon.colcon_core.verb:set package 'utbots_nav_utils' build argument 'cmake_force_configure' from command line to 'False'
+[0.360s] Level 5:colcon.colcon_core.verb:set package 'utbots_nav_utils' build argument 'ament_cmake_args' from command line to 'None'
+[0.360s] Level 5:colcon.colcon_core.verb:set package 'utbots_nav_utils' build argument 'catkin_cmake_args' from command line to 'None'
+[0.360s] Level 5:colcon.colcon_core.verb:set package 'utbots_nav_utils' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.360s] DEBUG:colcon.colcon_core.verb:Building package 'utbots_nav_utils' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/laser/ros2_ws/src/utbots_navigation/build/utbots_nav_utils', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/laser/ros2_ws/src/utbots_navigation/install/utbots_nav_utils', 'merge_install': False, 'path': '/home/laser/ros2_ws/src/utbots_navigation/utbots_nav_utils', 'symlink_install': False, 'test_result_base': None}
+[0.360s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.361s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.361s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/laser/ros2_ws/src/utbots_navigation/hoverboard-driver-hestia' with build type 'ament_cmake'
+[0.361s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/laser/ros2_ws/src/utbots_navigation/hoverboard-driver-hestia'
+[0.364s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.364s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.364s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.368s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/laser/ros2_ws/src/utbots_navigation/utbots_nav' with build type 'ament_cmake'
+[0.368s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/laser/ros2_ws/src/utbots_navigation/utbots_nav'
+[0.368s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.368s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.372s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/laser/ros2_ws/src/utbots_navigation/utbots_nav_utils' with build type 'ament_python'
+[0.372s] Level 1:colcon.colcon_core.shell:create_environment_hook('utbots_nav_utils', 'ament_prefix_path')
+[0.372s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/laser/ros2_ws/src/utbots_navigation/install/utbots_nav_utils/share/utbots_nav_utils/hook/ament_prefix_path.ps1'
+[0.373s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/laser/ros2_ws/src/utbots_navigation/install/utbots_nav_utils/share/utbots_nav_utils/hook/ament_prefix_path.dsv'
+[0.374s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/laser/ros2_ws/src/utbots_navigation/install/utbots_nav_utils/share/utbots_nav_utils/hook/ament_prefix_path.sh'
+[0.375s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.375s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.386s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/laser/ros2_ws/src/utbots_navigation/build/hoverboard_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/laser/ros2_ws/install/yolov8_ros:/home/laser/ros2_ws/install/utbots_face_recognition:/home/laser/ros2_ws/install/mediapipe_track:/opt/ros/humble PS1=(ros_env) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(ros_env) /usr/bin/cmake /home/laser/ros2_ws/src/utbots_navigation/hoverboard-driver-hestia -DCMAKE_INSTALL_PREFIX=/home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver
+[0.390s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/laser/ros2_ws/src/utbots_navigation/build/utbots_nav': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/laser/ros2_ws/install/yolov8_ros:/home/laser/ros2_ws/install/utbots_face_recognition:/home/laser/ros2_ws/install/mediapipe_track:/opt/ros/humble PS1=(ros_env) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(ros_env) /usr/bin/cmake /home/laser/ros2_ws/src/utbots_navigation/utbots_nav -DCMAKE_INSTALL_PREFIX=/home/laser/ros2_ws/src/utbots_navigation/install/utbots_nav
+[0.797s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/laser/ros2_ws/src/utbots_navigation/utbots_nav_utils'
+[0.798s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.798s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.377s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/laser/ros2_ws/src/utbots_navigation/utbots_nav_utils': PS1=(ros_env) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/laser/ros2_ws/src/utbots_navigation/build/utbots_nav_utils/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/laser/ros2_ws/src/utbots_navigation/install/utbots_nav_utils/lib/python3.10/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(ros_env) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/utbots_nav_utils build --build-base /home/laser/ros2_ws/src/utbots_navigation/build/utbots_nav_utils/build install --record /home/laser/ros2_ws/src/utbots_navigation/build/utbots_nav_utils/install.log --single-version-externally-managed install_data
+[1.461s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/laser/ros2_ws/src/utbots_navigation/build/utbots_nav' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/laser/ros2_ws/install/yolov8_ros:/home/laser/ros2_ws/install/utbots_face_recognition:/home/laser/ros2_ws/install/mediapipe_track:/opt/ros/humble PS1=(ros_env) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(ros_env) /usr/bin/cmake /home/laser/ros2_ws/src/utbots_navigation/utbots_nav -DCMAKE_INSTALL_PREFIX=/home/laser/ros2_ws/src/utbots_navigation/install/utbots_nav
+[1.465s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/laser/ros2_ws/src/utbots_navigation/build/utbots_nav': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/laser/ros2_ws/install/yolov8_ros:/home/laser/ros2_ws/install/utbots_face_recognition:/home/laser/ros2_ws/install/mediapipe_track:/opt/ros/humble PS1=(ros_env) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(ros_env) /usr/bin/cmake --build /home/laser/ros2_ws/src/utbots_navigation/build/utbots_nav -- -j16 -l16
+[1.523s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/laser/ros2_ws/src/utbots_navigation/build/utbots_nav' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/laser/ros2_ws/install/yolov8_ros:/home/laser/ros2_ws/install/utbots_face_recognition:/home/laser/ros2_ws/install/mediapipe_track:/opt/ros/humble PS1=(ros_env) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(ros_env) /usr/bin/cmake --build /home/laser/ros2_ws/src/utbots_navigation/build/utbots_nav -- -j16 -l16
+[1.538s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/laser/ros2_ws/src/utbots_navigation/build/utbots_nav': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/laser/ros2_ws/install/yolov8_ros:/home/laser/ros2_ws/install/utbots_face_recognition:/home/laser/ros2_ws/install/mediapipe_track:/opt/ros/humble PS1=(ros_env) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(ros_env) /usr/bin/cmake --install /home/laser/ros2_ws/src/utbots_navigation/build/utbots_nav
+[1.556s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(utbots_nav)
+[1.556s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/laser/ros2_ws/src/utbots_navigation/build/utbots_nav' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/laser/ros2_ws/install/yolov8_ros:/home/laser/ros2_ws/install/utbots_face_recognition:/home/laser/ros2_ws/install/mediapipe_track:/opt/ros/humble PS1=(ros_env) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(ros_env) /usr/bin/cmake --install /home/laser/ros2_ws/src/utbots_navigation/build/utbots_nav
+[1.559s] Level 1:colcon.colcon_core.environment:checking '/home/laser/ros2_ws/src/utbots_navigation/install/utbots_nav' for CMake module files
+[1.560s] Level 1:colcon.colcon_core.environment:checking '/home/laser/ros2_ws/src/utbots_navigation/install/utbots_nav' for CMake config files
+[1.560s] Level 1:colcon.colcon_core.shell:create_environment_hook('utbots_nav', 'cmake_prefix_path')
+[1.560s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/laser/ros2_ws/src/utbots_navigation/install/utbots_nav/share/utbots_nav/hook/cmake_prefix_path.ps1'
+[1.561s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/laser/ros2_ws/src/utbots_navigation/install/utbots_nav/share/utbots_nav/hook/cmake_prefix_path.dsv'
+[1.561s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/laser/ros2_ws/src/utbots_navigation/install/utbots_nav/share/utbots_nav/hook/cmake_prefix_path.sh'
+[1.563s] Level 1:colcon.colcon_core.environment:checking '/home/laser/ros2_ws/src/utbots_navigation/install/utbots_nav/bin'
+[1.563s] Level 1:colcon.colcon_core.environment:checking '/home/laser/ros2_ws/src/utbots_navigation/install/utbots_nav/lib/pkgconfig/utbots_nav.pc'
+[1.563s] Level 1:colcon.colcon_core.environment:checking '/home/laser/ros2_ws/src/utbots_navigation/install/utbots_nav/lib/python3.10/site-packages'
+[1.563s] Level 1:colcon.colcon_core.environment:checking '/home/laser/ros2_ws/src/utbots_navigation/install/utbots_nav/bin'
+[1.564s] INFO:colcon.colcon_core.shell:Creating package script '/home/laser/ros2_ws/src/utbots_navigation/install/utbots_nav/share/utbots_nav/package.ps1'
+[1.565s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/laser/ros2_ws/src/utbots_navigation/install/utbots_nav/share/utbots_nav/package.dsv'
+[1.566s] INFO:colcon.colcon_core.shell:Creating package script '/home/laser/ros2_ws/src/utbots_navigation/install/utbots_nav/share/utbots_nav/package.sh'
+[1.567s] INFO:colcon.colcon_core.shell:Creating package script '/home/laser/ros2_ws/src/utbots_navigation/install/utbots_nav/share/utbots_nav/package.bash'
+[1.568s] INFO:colcon.colcon_core.shell:Creating package script '/home/laser/ros2_ws/src/utbots_navigation/install/utbots_nav/share/utbots_nav/package.zsh'
+[1.568s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/laser/ros2_ws/src/utbots_navigation/install/utbots_nav/share/colcon-core/packages/utbots_nav)
+[1.569s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(utbots_nav)
+[1.569s] Level 1:colcon.colcon_core.environment:checking '/home/laser/ros2_ws/src/utbots_navigation/install/utbots_nav' for CMake module files
+[1.570s] Level 1:colcon.colcon_core.environment:checking '/home/laser/ros2_ws/src/utbots_navigation/install/utbots_nav' for CMake config files
+[1.570s] Level 1:colcon.colcon_core.shell:create_environment_hook('utbots_nav', 'cmake_prefix_path')
+[1.570s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/laser/ros2_ws/src/utbots_navigation/install/utbots_nav/share/utbots_nav/hook/cmake_prefix_path.ps1'
+[1.571s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/laser/ros2_ws/src/utbots_navigation/install/utbots_nav/share/utbots_nav/hook/cmake_prefix_path.dsv'
+[1.571s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/laser/ros2_ws/src/utbots_navigation/install/utbots_nav/share/utbots_nav/hook/cmake_prefix_path.sh'
+[1.572s] Level 1:colcon.colcon_core.environment:checking '/home/laser/ros2_ws/src/utbots_navigation/install/utbots_nav/bin'
+[1.572s] Level 1:colcon.colcon_core.environment:checking '/home/laser/ros2_ws/src/utbots_navigation/install/utbots_nav/lib/pkgconfig/utbots_nav.pc'
+[1.573s] Level 1:colcon.colcon_core.environment:checking '/home/laser/ros2_ws/src/utbots_navigation/install/utbots_nav/lib/python3.10/site-packages'
+[1.573s] Level 1:colcon.colcon_core.environment:checking '/home/laser/ros2_ws/src/utbots_navigation/install/utbots_nav/bin'
+[1.573s] INFO:colcon.colcon_core.shell:Creating package script '/home/laser/ros2_ws/src/utbots_navigation/install/utbots_nav/share/utbots_nav/package.ps1'
+[1.574s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/laser/ros2_ws/src/utbots_navigation/install/utbots_nav/share/utbots_nav/package.dsv'
+[1.574s] INFO:colcon.colcon_core.shell:Creating package script '/home/laser/ros2_ws/src/utbots_navigation/install/utbots_nav/share/utbots_nav/package.sh'
+[1.575s] INFO:colcon.colcon_core.shell:Creating package script '/home/laser/ros2_ws/src/utbots_navigation/install/utbots_nav/share/utbots_nav/package.bash'
+[1.575s] INFO:colcon.colcon_core.shell:Creating package script '/home/laser/ros2_ws/src/utbots_navigation/install/utbots_nav/share/utbots_nav/package.zsh'
+[1.576s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/laser/ros2_ws/src/utbots_navigation/install/utbots_nav/share/colcon-core/packages/utbots_nav)
+[1.818s] Level 1:colcon.colcon_core.environment:checking '/home/laser/ros2_ws/src/utbots_navigation/install/utbots_nav_utils' for CMake module files
+[1.819s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/laser/ros2_ws/src/utbots_navigation/utbots_nav_utils' returned '0': PS1=(ros_env) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/laser/ros2_ws/src/utbots_navigation/build/utbots_nav_utils/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/laser/ros2_ws/src/utbots_navigation/install/utbots_nav_utils/lib/python3.10/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(ros_env) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/utbots_nav_utils build --build-base /home/laser/ros2_ws/src/utbots_navigation/build/utbots_nav_utils/build install --record /home/laser/ros2_ws/src/utbots_navigation/build/utbots_nav_utils/install.log --single-version-externally-managed install_data
+[1.820s] Level 1:colcon.colcon_core.environment:checking '/home/laser/ros2_ws/src/utbots_navigation/install/utbots_nav_utils' for CMake config files
+[1.821s] Level 1:colcon.colcon_core.environment:checking '/home/laser/ros2_ws/src/utbots_navigation/install/utbots_nav_utils/lib'
+[1.821s] Level 1:colcon.colcon_core.environment:checking '/home/laser/ros2_ws/src/utbots_navigation/install/utbots_nav_utils/bin'
+[1.821s] Level 1:colcon.colcon_core.environment:checking '/home/laser/ros2_ws/src/utbots_navigation/install/utbots_nav_utils/lib/pkgconfig/utbots_nav_utils.pc'
+[1.821s] Level 1:colcon.colcon_core.environment:checking '/home/laser/ros2_ws/src/utbots_navigation/install/utbots_nav_utils/lib/python3.10/site-packages'
+[1.822s] Level 1:colcon.colcon_core.shell:create_environment_hook('utbots_nav_utils', 'pythonpath')
+[1.822s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/laser/ros2_ws/src/utbots_navigation/install/utbots_nav_utils/share/utbots_nav_utils/hook/pythonpath.ps1'
+[1.823s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/laser/ros2_ws/src/utbots_navigation/install/utbots_nav_utils/share/utbots_nav_utils/hook/pythonpath.dsv'
+[1.824s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/laser/ros2_ws/src/utbots_navigation/install/utbots_nav_utils/share/utbots_nav_utils/hook/pythonpath.sh'
+[1.825s] Level 1:colcon.colcon_core.environment:checking '/home/laser/ros2_ws/src/utbots_navigation/install/utbots_nav_utils/bin'
+[1.825s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(utbots_nav_utils)
+[1.825s] INFO:colcon.colcon_core.shell:Creating package script '/home/laser/ros2_ws/src/utbots_navigation/install/utbots_nav_utils/share/utbots_nav_utils/package.ps1'
+[1.826s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/laser/ros2_ws/src/utbots_navigation/install/utbots_nav_utils/share/utbots_nav_utils/package.dsv'
+[1.827s] INFO:colcon.colcon_core.shell:Creating package script '/home/laser/ros2_ws/src/utbots_navigation/install/utbots_nav_utils/share/utbots_nav_utils/package.sh'
+[1.827s] INFO:colcon.colcon_core.shell:Creating package script '/home/laser/ros2_ws/src/utbots_navigation/install/utbots_nav_utils/share/utbots_nav_utils/package.bash'
+[1.828s] INFO:colcon.colcon_core.shell:Creating package script '/home/laser/ros2_ws/src/utbots_navigation/install/utbots_nav_utils/share/utbots_nav_utils/package.zsh'
+[1.828s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/laser/ros2_ws/src/utbots_navigation/install/utbots_nav_utils/share/colcon-core/packages/utbots_nav_utils)
+[2.457s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/laser/ros2_ws/src/utbots_navigation/build/hoverboard_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/laser/ros2_ws/install/yolov8_ros:/home/laser/ros2_ws/install/utbots_face_recognition:/home/laser/ros2_ws/install/mediapipe_track:/opt/ros/humble PS1=(ros_env) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(ros_env) /usr/bin/cmake /home/laser/ros2_ws/src/utbots_navigation/hoverboard-driver-hestia -DCMAKE_INSTALL_PREFIX=/home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver
+[2.460s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/laser/ros2_ws/src/utbots_navigation/build/hoverboard_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/laser/ros2_ws/install/yolov8_ros:/home/laser/ros2_ws/install/utbots_face_recognition:/home/laser/ros2_ws/install/mediapipe_track:/opt/ros/humble PS1=(ros_env) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(ros_env) /usr/bin/cmake --build /home/laser/ros2_ws/src/utbots_navigation/build/hoverboard_driver -- -j16 -l16
+[10.480s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/laser/ros2_ws/src/utbots_navigation/build/hoverboard_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/laser/ros2_ws/install/yolov8_ros:/home/laser/ros2_ws/install/utbots_face_recognition:/home/laser/ros2_ws/install/mediapipe_track:/opt/ros/humble PS1=(ros_env) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(ros_env) /usr/bin/cmake --build /home/laser/ros2_ws/src/utbots_navigation/build/hoverboard_driver -- -j16 -l16
+[10.482s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/laser/ros2_ws/src/utbots_navigation/build/hoverboard_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/laser/ros2_ws/install/yolov8_ros:/home/laser/ros2_ws/install/utbots_face_recognition:/home/laser/ros2_ws/install/mediapipe_track:/opt/ros/humble PS1=(ros_env) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(ros_env) /usr/bin/cmake --install /home/laser/ros2_ws/src/utbots_navigation/build/hoverboard_driver
+[10.505s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hoverboard_driver)
+[10.505s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/laser/ros2_ws/src/utbots_navigation/build/hoverboard_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/laser/ros2_ws/install/yolov8_ros:/home/laser/ros2_ws/install/utbots_face_recognition:/home/laser/ros2_ws/install/mediapipe_track:/opt/ros/humble PS1=(ros_env) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(ros_env) /usr/bin/cmake --install /home/laser/ros2_ws/src/utbots_navigation/build/hoverboard_driver
+[10.505s] Level 1:colcon.colcon_core.environment:checking '/home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver' for CMake module files
+[10.507s] Level 1:colcon.colcon_core.environment:checking '/home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver' for CMake config files
+[10.507s] Level 1:colcon.colcon_core.shell:create_environment_hook('hoverboard_driver', 'cmake_prefix_path')
+[10.508s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/hook/cmake_prefix_path.ps1'
+[10.508s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/hook/cmake_prefix_path.dsv'
+[10.509s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/hook/cmake_prefix_path.sh'
+[10.509s] Level 1:colcon.colcon_core.environment:checking '/home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/lib'
+[10.509s] Level 1:colcon.colcon_core.shell:create_environment_hook('hoverboard_driver', 'ld_library_path_lib')
+[10.510s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/hook/ld_library_path_lib.ps1'
+[10.510s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/hook/ld_library_path_lib.dsv'
+[10.510s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/hook/ld_library_path_lib.sh'
+[10.511s] Level 1:colcon.colcon_core.environment:checking '/home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/bin'
+[10.511s] Level 1:colcon.colcon_core.environment:checking '/home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/lib/pkgconfig/hoverboard_driver.pc'
+[10.511s] Level 1:colcon.colcon_core.environment:checking '/home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/lib/python3.10/site-packages'
+[10.511s] Level 1:colcon.colcon_core.environment:checking '/home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/bin'
+[10.512s] INFO:colcon.colcon_core.shell:Creating package script '/home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/package.ps1'
+[10.512s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/package.dsv'
+[10.513s] INFO:colcon.colcon_core.shell:Creating package script '/home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/package.sh'
+[10.513s] INFO:colcon.colcon_core.shell:Creating package script '/home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/package.bash'
+[10.514s] INFO:colcon.colcon_core.shell:Creating package script '/home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/package.zsh'
+[10.514s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/colcon-core/packages/hoverboard_driver)
+[10.515s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hoverboard_driver)
+[10.515s] Level 1:colcon.colcon_core.environment:checking '/home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver' for CMake module files
+[10.516s] Level 1:colcon.colcon_core.environment:checking '/home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver' for CMake config files
+[10.516s] Level 1:colcon.colcon_core.shell:create_environment_hook('hoverboard_driver', 'cmake_prefix_path')
+[10.516s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/hook/cmake_prefix_path.ps1'
+[10.517s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/hook/cmake_prefix_path.dsv'
+[10.517s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/hook/cmake_prefix_path.sh'
+[10.518s] Level 1:colcon.colcon_core.environment:checking '/home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/lib'
+[10.518s] Level 1:colcon.colcon_core.shell:create_environment_hook('hoverboard_driver', 'ld_library_path_lib')
+[10.518s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/hook/ld_library_path_lib.ps1'
+[10.518s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/hook/ld_library_path_lib.dsv'
+[10.519s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/hook/ld_library_path_lib.sh'
+[10.519s] Level 1:colcon.colcon_core.environment:checking '/home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/bin'
+[10.519s] Level 1:colcon.colcon_core.environment:checking '/home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/lib/pkgconfig/hoverboard_driver.pc'
+[10.519s] Level 1:colcon.colcon_core.environment:checking '/home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/lib/python3.10/site-packages'
+[10.520s] Level 1:colcon.colcon_core.environment:checking '/home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/bin'
+[10.520s] INFO:colcon.colcon_core.shell:Creating package script '/home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/package.ps1'
+[10.521s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/package.dsv'
+[10.521s] INFO:colcon.colcon_core.shell:Creating package script '/home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/package.sh'
+[10.522s] INFO:colcon.colcon_core.shell:Creating package script '/home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/package.bash'
+[10.522s] INFO:colcon.colcon_core.shell:Creating package script '/home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/hoverboard_driver/package.zsh'
+[10.522s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/laser/ros2_ws/src/utbots_navigation/install/hoverboard_driver/share/colcon-core/packages/hoverboard_driver)
+[10.523s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[10.523s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[10.523s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[10.523s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[10.530s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[10.530s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[10.530s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[10.550s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[10.550s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/laser/ros2_ws/src/utbots_navigation/install/local_setup.ps1'
+[10.552s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/laser/ros2_ws/src/utbots_navigation/install/_local_setup_util_ps1.py'
+[10.553s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/laser/ros2_ws/src/utbots_navigation/install/setup.ps1'
+[10.555s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/laser/ros2_ws/src/utbots_navigation/install/local_setup.sh'
+[10.555s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/laser/ros2_ws/src/utbots_navigation/install/_local_setup_util_sh.py'
+[10.556s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/laser/ros2_ws/src/utbots_navigation/install/setup.sh'
+[10.558s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/laser/ros2_ws/src/utbots_navigation/install/local_setup.bash'
+[10.559s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/laser/ros2_ws/src/utbots_navigation/install/setup.bash'
+[10.561s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/laser/ros2_ws/src/utbots_navigation/install/local_setup.zsh'
+[10.561s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/laser/ros2_ws/src/utbots_navigation/install/setup.zsh'
