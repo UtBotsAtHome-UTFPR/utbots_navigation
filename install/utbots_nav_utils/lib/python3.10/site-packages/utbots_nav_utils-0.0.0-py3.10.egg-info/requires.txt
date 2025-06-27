@@ -1,5 +1,0 @@
-setuptools
-
-[test]
-other-test-deps
-pytest

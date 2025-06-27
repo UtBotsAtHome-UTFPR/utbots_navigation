@@ -1,6 +1,0 @@
-source;share/utbots_nav_utils/hook/pythonpath.ps1
-source;share/utbots_nav_utils/hook/pythonpath.dsv
-source;share/utbots_nav_utils/hook/pythonpath.sh
-source;share/utbots_nav_utils/hook/ament_prefix_path.ps1
-source;share/utbots_nav_utils/hook/ament_prefix_path.dsv
-source;share/utbots_nav_utils/hook/ament_prefix_path.sh
