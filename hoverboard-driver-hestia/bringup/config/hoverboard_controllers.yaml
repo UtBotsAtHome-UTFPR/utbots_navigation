@@ -40,9 +40,9 @@ hoverboard_base_controller:
     linear.x.has_velocity_limits: true
     linear.x.has_acceleration_limits: true
     linear.x.has_jerk_limits: false
-    linear.x.max_velocity: 1.0
-    linear.x.min_velocity: -1.0
-    linear.x.max_acceleration: 1.0
+    linear.x.max_velocity: 1.5 # Era 1.0
+    linear.x.min_velocity: -1.5 # Era -1.0
+    linear.x.max_acceleration: 1.2 # Era 1.0
     linear.x.max_jerk: 0.0
     linear.x.min_jerk: 0.0
 
