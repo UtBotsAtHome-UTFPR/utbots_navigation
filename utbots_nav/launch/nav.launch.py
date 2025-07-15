@@ -56,7 +56,7 @@ def generate_launch_description():
         # Use IMU
         DeclareLaunchArgument(
             'use_imu',
-            default_value='true',
+            default_value='false',
             description='Set to true to launch robot_localization'
         ),
 
