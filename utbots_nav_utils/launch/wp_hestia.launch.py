@@ -43,7 +43,7 @@ def launch_rqt_tools(context, *args, **kwargs):
 #                 proc.kill()
 
 def launch_setup(context, *args, **kwargs):
-    map_name = LaunchConfiguration('map_name',default='pitaco').perform(context)
+    map_name = LaunchConfiguration('map_name',default='arena_filled').perform(context)
     lidar_port = LaunchConfiguration('lidar_port',default="/dev/ttyUSB0").perform(context)
     use_imu = LaunchConfiguration('use_imu',default='false').perform(context)
 
@@ -94,7 +94,7 @@ def launch_setup(context, *args, **kwargs):
 
 def generate_launch_description():
     return LaunchDescription([
-        DeclareLaunchArgument('map_name', default_value='pitaco'),
+        DeclareLaunchArgument('map_name', default_value='arena_filled'),
         DeclareLaunchArgument('lidar_port', default_value='wor/dev/ttyUSB0ld'),
         DeclareLaunchArgument('use_imu', default_value='false'),
 
