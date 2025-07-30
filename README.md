@@ -123,7 +123,7 @@ ros2 service call /utbots/utbots_nav/save_waypoint utbots_srvs/srv/SetString \
 ### Launch parameters
 Both navigation and mapping have parameters that can be set when launching them:
 ```bash
-ros2 launch utbots_nav map.launch.py map_dir:="<map_file_path>" input_scan_topic:="topic_name" filtered_scan_topic:="filtered_laser_topic_name" lidar_port:="<lidar_port>" use_imu:=<True or False> imu_port:=<imu_port>"
+ros2 launch utbots_nav map.launch.py map_dir:="<map_file_path>" input_scan_topic:="topic_name" filtered_scan_topic:="filtered_laser_topic_name" lidar_port:="<lidar_port>" use_imu:=<True or False> imu_port:="<imu_port>"
 
 ros2 launch utbots_nav nav.launch.py map_dir:="<map_file_path>" input_scan_topic:="topic_name" filtered_scan_topic:="filtered_laser_topic_name" lidar_port:="<lidar_port>" use_imu:=<True or False> imu_port:="<imu_port>"
 ```
