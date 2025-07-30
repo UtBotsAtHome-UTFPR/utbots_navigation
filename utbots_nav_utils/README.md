@@ -1,17 +1,6 @@
-# utbots_navigation
+# utbots_nav_utils
 
-![Static Badge](https://img.shields.io/badge/ROS_Foxy-Not_Tested-red)
-![Static Badge](https://img.shields.io/badge/ROS_Humble-Tested-green)
-![Static Badge](https://img.shields.io/badge/ROS_Jazzy-Not_Tested-red)
-
-**This stack contains packages related to environment mapping and autonomous navigation, such as:**
-
-- hoverboard_driver_hestia
-- utbots_nav
-
-## Getting started
-
-### Installation
+## Installation
 
 ```bash
 cd <ros2_ws>/src
