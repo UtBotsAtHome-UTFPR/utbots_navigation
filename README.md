@@ -80,6 +80,8 @@ export BASE_MODEL=hestia
 ros2 launch utbots_nav map.launch.py    ## Launch all mapping packages (Gmapping)
 ```
 
+![map_example](map_example.png)
+
 You should move the robot through the environment and the simplest way is to use the keyboard as a controller:
 ```bash
 ros2 run teleop_twist_keyboard teleop_twist_keyboard
@@ -99,6 +101,8 @@ export BASE_MODEL=hestia
 ros2 launch utbots_nav nav.launch.py  map:="<map_path>"  ## Launch all navigation packages (AMCL)
 ```
 You should see RViz pop up in your screen. To initiate autonomous localization and navigation, you must first set the robot initial pose estimate (where you think it is and where you think its oriented to). If everything launched correctly, you should see the lidar data being drawn in real time with color in RViz and then be able to set Navigation Goals.
+
+![nav_example](nav_example.png)
 
 #### Save waypoints with a name
 
