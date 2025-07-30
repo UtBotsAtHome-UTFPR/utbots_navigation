@@ -18,7 +18,6 @@
 ```bash
 cd <ros2_ws>/src
 git clone https://github.com/UtBotsAtHome-UTFPR/utbots_navigation.git
-git checkout ros2-dev
 cd ../
 ```
 
