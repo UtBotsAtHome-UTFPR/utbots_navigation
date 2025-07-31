@@ -23,7 +23,7 @@ cd ../
 
 ### Dependencies
 
-This stacks utilizes [rplidar_ros](https://github.com/Slamtec/rplidar_ros/tree/ros2) as the LIDAR driver and [navigation2](https://github.com/ros-navigation/navigation2) for navigation and mapping algorithms integration to ROS2. Teleop keyboard is also useful for a person moving the robot. Install them with:
+This stack utilizes [rplidar_ros](https://github.com/Slamtec/rplidar_ros/tree/ros2) as the LIDAR driver and [navigation2](https://github.com/ros-navigation/navigation2) for navigation and mapping algorithms integration to ROS2. Teleop keyboard is also useful for a person moving the robot. Install them with:
 
 ```bash
 sudo apt install ros-humble-rplidar-ros ros-humble-navigation2 ros‑humble‑teleop‑twist‑keyboard
