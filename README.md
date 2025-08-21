@@ -131,7 +131,7 @@ ros2 launch utbots_nav nav.launch.py map_dir:="<map_file_path>" input_scan_topic
 
 - `./hoverboard-driver-hestia/description/urdf/diffbot_description.urdf.xacro`: hoverboard mobile base static tf distances and frames 
 - `./hoverboard-driver-hestia/description/ros2_control/hoverboard_driver.ros2_control.xacro`: hoverboard hardware min and max velocities permitted for the wheels, radius of wheels
-- `./utbots_nav/param/hoverboard_controllers.yaml`: controller software limitations for mobile base dimensions, wheel separation, frames and min max velocities and acceleration of the robot (not the same as the wheels, because of the distance of wheels to the center of rotation)
+- `./hoverboard-driver-hestia/bringup/config/hoverboard_controllers.yaml`: controller software limitations for mobile base dimensions, wheel separation, frames and min max velocities and acceleration of the robot (not the same as the wheels, because of the distance of wheels to the center of rotation)
 - `./hoverboard-driver-hestia/bringup/config/box_laser_filter.yaml`: parameter file for configuring the area the lidar sensor will ignore so it doesn't percieve the robot as an obstacle
 - `./utbots_nav/param/hestia_nav.yaml`: navigation parameters (globalcostmap, localcostmap, footprint, AMCL, etc.)
 - `./utbots_nav/param/hestia_map.yaml`: mapping parameters (globalcostmap, localcostmap, footprint, etc.)

@@ -8,7 +8,7 @@
         <hardware>
           <plugin>hoverboard_driver/hoverboard_driver</plugin>
           <param name="wheel_radius">0.0825</param>
-          <param name="max_velocity">4.0</param>  <!-- m/s -->
+          <param name="max_velocity">3.0</param>  <!-- m/s -->
           <param name="device">/dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller-if00-port0</param>
         </hardware>
         <joint name="${prefix}left_wheel_joint">
