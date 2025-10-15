@@ -50,7 +50,7 @@ def generate_launch_description():
             default_value=os.path.join(
                 get_package_share_directory('utbots_nav'),
                 'map',
-                'corredor2.yaml'),
+                'cbr2025v2.yaml'),
             description='Full path to map file to load'),
 
         # Use IMU

@@ -19,7 +19,7 @@
     <joint name="${prefix}base_link_to_laser" type="fixed">
       <parent link="${prefix}base_link"/>
       <child link="${prefix}laser"/>
-      <origin xyz="0.15 0 0.06" rpy="0 0 3.14159"/>
+      <origin xyz="0.18 0 0.06" rpy="0 0 3.14159"/>
     </joint>
 
     <!-- scan (often optional) -->
